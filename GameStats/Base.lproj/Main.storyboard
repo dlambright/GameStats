@@ -75,7 +75,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddb-c0-zMP">
-                                <rect key="frame" x="275" y="276" width="51.5" height="21"/>
+                                <rect key="frame" x="275" y="276" width="52" height="21"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -98,8 +98,29 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WIN PROBABILITY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OsX-QQ-JPj">
+                                <rect key="frame" x="230" y="450" width="140" height="21"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCy-ed-PMJ">
                                 <rect key="frame" x="498" y="410" width="20" height="21"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="55%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yht-3Y-9EU">
+                                <rect key="frame" x="75" y="451" width="32" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="PIp-FN-kD8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="45%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uv-A3-Myb">
+                                <rect key="frame" x="493" y="450" width="32" height="21"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -109,27 +130,28 @@
                         <constraints>
                             <constraint firstItem="6Fs-RP-QtC" firstAttribute="top" secondItem="1zG-fd-SBN" secondAttribute="bottom" constant="53" id="1KD-Hf-2wv"/>
                             <constraint firstItem="KpW-Yj-yhF" firstAttribute="top" secondItem="Oo8-yi-oKf" secondAttribute="bottom" constant="21" id="3du-2m-RSC"/>
-                            <constraint firstItem="KpW-Yj-yhF" firstAttribute="top" secondItem="Oo8-yi-oKf" secondAttribute="bottom" constant="21" id="402-pU-eAr"/>
                             <constraint firstItem="1zG-fd-SBN" firstAttribute="top" secondItem="2d7-9z-lmI" secondAttribute="bottom" constant="8" symbolic="YES" id="6Fu-hO-xQq"/>
                             <constraint firstItem="6Fs-RP-QtC" firstAttribute="leading" secondItem="1BO-00-LmK" secondAttribute="leading" constant="7" id="6YC-9g-YcF"/>
                             <constraint firstItem="1zG-fd-SBN" firstAttribute="top" secondItem="IEd-3j-IdO" secondAttribute="top" id="6et-W8-G8c"/>
+                            <constraint firstItem="OsX-QQ-JPj" firstAttribute="leading" secondItem="dlj-mc-o8h" secondAttribute="trailing" constant="-116" id="8xG-xP-itq"/>
                             <constraint firstItem="Ddb-c0-zMP" firstAttribute="baseline" secondItem="6Fs-RP-QtC" secondAttribute="baseline" constant="1" id="8xy-g2-6C4"/>
                             <constraint firstItem="dlj-mc-o8h" firstAttribute="leading" secondItem="L0J-zX-Z3z" secondAttribute="leading" constant="-7" id="CEF-dR-DCq"/>
+                            <constraint firstItem="Yht-3Y-9EU" firstAttribute="centerX" secondItem="1zG-fd-SBN" secondAttribute="centerX" id="Dgy-EZ-kGe"/>
                             <constraint firstItem="IEd-3j-IdO" firstAttribute="trailing" secondItem="XiO-j9-DLI" secondAttribute="trailing" constant="66" id="F32-ab-Pc7"/>
                             <constraint firstItem="Ddb-c0-zMP" firstAttribute="top" secondItem="2d7-9z-lmI" secondAttribute="bottom" constant="212" id="Fq0-n8-zup"/>
                             <constraint firstItem="Pwf-JV-LKE" firstAttribute="leading" secondItem="XiO-j9-DLI" secondAttribute="leading" constant="-16" id="IhI-1Z-52A"/>
                             <constraint firstItem="Ddb-c0-zMP" firstAttribute="baseline" secondItem="XiO-j9-DLI" secondAttribute="firstBaseline" constant="1" id="ItG-hi-BHH"/>
                             <constraint firstItem="1BO-00-LmK" firstAttribute="baseline" secondItem="YLn-qT-12w" secondAttribute="baseline" constant="-2" id="MA8-gI-jmX"/>
                             <constraint firstItem="dlj-mc-o8h" firstAttribute="baseline" secondItem="KpW-Yj-yhF" secondAttribute="baseline" id="MEk-oJ-SPp"/>
+                            <constraint firstItem="OsX-QQ-JPj" firstAttribute="top" secondItem="dlj-mc-o8h" secondAttribute="bottom" constant="18" id="ODf-be-hGW"/>
                             <constraint firstItem="1zG-fd-SBN" firstAttribute="leading" secondItem="U8a-SN-Zrc" secondAttribute="leadingMargin" id="Phf-Qk-cwD"/>
-                            <constraint firstItem="1BO-00-LmK" firstAttribute="top" secondItem="6Fs-RP-QtC" secondAttribute="bottom" constant="26" id="Qib-v4-vyb"/>
                             <constraint firstItem="Ddb-c0-zMP" firstAttribute="baseline" secondItem="XiO-j9-DLI" secondAttribute="baseline" id="UR5-HM-ZqY"/>
                             <constraint firstItem="L0J-zX-Z3z" firstAttribute="baseline" secondItem="los-ek-5Ug" secondAttribute="baseline" constant="-1" id="VZB-dQ-oFT"/>
                             <constraint firstItem="dlj-mc-o8h" firstAttribute="centerX" secondItem="U8a-SN-Zrc" secondAttribute="centerX" constant="-1.5" id="X4C-x9-YLI"/>
                             <constraint firstItem="Pwf-JV-LKE" firstAttribute="baseline" secondItem="YLn-qT-12w" secondAttribute="baseline" constant="-1" id="X4l-bH-LJk"/>
                             <constraint firstItem="1BO-00-LmK" firstAttribute="top" secondItem="6Fs-RP-QtC" secondAttribute="bottom" constant="26" id="Xb6-Y4-ihN"/>
-                            <constraint firstItem="6Fs-RP-QtC" firstAttribute="top" secondItem="1zG-fd-SBN" secondAttribute="bottom" constant="53" id="XvW-DK-cdp"/>
                             <constraint firstItem="XiO-j9-DLI" firstAttribute="top" secondItem="IEd-3j-IdO" secondAttribute="bottom" constant="54" id="Zq5-45-I8E"/>
+                            <constraint firstItem="Yht-3Y-9EU" firstAttribute="leading" secondItem="U8a-SN-Zrc" secondAttribute="leadingMargin" constant="59" id="aRR-BI-Txo"/>
                             <constraint firstItem="IEd-3j-IdO" firstAttribute="top" secondItem="2d7-9z-lmI" secondAttribute="bottom" constant="8" id="aTJ-Wt-Mr2"/>
                             <constraint firstItem="1BO-00-LmK" firstAttribute="leading" secondItem="Oo8-yi-oKf" secondAttribute="leading" constant="-3" id="arG-0W-zED"/>
                             <constraint firstItem="Oo8-yi-oKf" firstAttribute="leading" secondItem="KpW-Yj-yhF" secondAttribute="leading" constant="-16" id="f2I-9w-Fjc"/>
@@ -138,15 +160,17 @@
                             <constraint firstItem="Ddb-c0-zMP" firstAttribute="firstBaseline" secondItem="6Fs-RP-QtC" secondAttribute="baseline" id="lpA-Ml-bkI"/>
                             <constraint firstItem="1zG-fd-SBN" firstAttribute="top" secondItem="2d7-9z-lmI" secondAttribute="bottom" constant="8" id="mep-yD-mRU"/>
                             <constraint firstItem="L0J-zX-Z3z" firstAttribute="baseline" secondItem="Oo8-yi-oKf" secondAttribute="baseline" constant="1" id="qaV-qj-QBL"/>
-                            <constraint firstItem="Oo8-yi-oKf" firstAttribute="top" secondItem="1BO-00-LmK" secondAttribute="bottom" constant="26" id="sSM-ck-zVi"/>
                             <constraint firstItem="los-ek-5Ug" firstAttribute="leading" secondItem="Pwf-JV-LKE" secondAttribute="leading" constant="5" id="sWG-E7-frg"/>
                             <constraint firstItem="IEd-3j-IdO" firstAttribute="top" secondItem="2d7-9z-lmI" secondAttribute="bottom" constant="8" id="tOF-Df-syH"/>
                             <constraint firstItem="1zG-fd-SBN" firstAttribute="leading" secondItem="6Fs-RP-QtC" secondAttribute="leading" constant="-57" id="tga-gt-t62"/>
                             <constraint firstItem="YLn-qT-12w" firstAttribute="leading" secondItem="Ddb-c0-zMP" secondAttribute="leading" id="tzI-Iy-Uhh"/>
+                            <constraint firstItem="Yht-3Y-9EU" firstAttribute="top" secondItem="KpW-Yj-yhF" secondAttribute="bottom" constant="19" id="uA0-ZU-J6R"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8uv-A3-Myb" secondAttribute="trailing" constant="59" id="uvy-Hw-lAZ"/>
                             <constraint firstItem="qCy-ed-PMJ" firstAttribute="baseline" secondItem="dlj-mc-o8h" secondAttribute="baseline" constant="-1" id="wTP-1l-E2i"/>
                             <constraint firstItem="qCy-ed-PMJ" firstAttribute="leading" secondItem="los-ek-5Ug" secondAttribute="leading" constant="11" id="yg8-eq-xfE"/>
                             <constraint firstItem="Oo8-yi-oKf" firstAttribute="top" secondItem="1BO-00-LmK" secondAttribute="bottom" constant="26" id="ygy-EJ-zrh"/>
                             <constraint firstItem="L0J-zX-Z3z" firstAttribute="leading" secondItem="YLn-qT-12w" secondAttribute="leading" constant="-17" id="yjf-F4-Ahn"/>
+                            <constraint firstItem="8uv-A3-Myb" firstAttribute="top" secondItem="qCy-ed-PMJ" secondAttribute="bottom" constant="19" id="zmc-km-Hce"/>
                             <constraint firstItem="1zG-fd-SBN" firstAttribute="top" secondItem="2d7-9z-lmI" secondAttribute="bottom" constant="8" id="zuE-Kd-Rlk"/>
                         </constraints>
                     </view>
