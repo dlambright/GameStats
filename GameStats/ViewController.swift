@@ -12,15 +12,12 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tblGames: UITableView!
-
-    var items = ["one", "two"]
     
     var teamList : [String] = ["Nets", "Raptors", "Celtics", "Knicks", "76ers", "Hawks", "Heat", "Magic", "Hornets", "Wizards", "Bucks", "Cavaliers", "Pistons", "Bulls", "Pacers", "Kings", "Warriors", "Lakers", "Suns", "Clippers", "Jazz", "Thunder", "TrailBlazers", "Timberwolves", "Nuggets", "Spurs", "Rockets", "Grizzlies", "Pelicans", "Mavericks"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        //self.tblGames.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+
         self.tblGames.dataSource = self
     }
 
@@ -29,11 +26,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Dispose of any resources that can be recreated.
     }
     
+    // CELLS IN TABLE VIEW COUNT
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) ->Int{
         return teamList.count / 2;
-
     }
-
+    
+    // POPULATE CELLS
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath)->UITableViewCell{
         let cell : CustomCell = self.tblGames.dequeueReusableCellWithIdentifier("cell") as! CustomCell
         

@@ -15,7 +15,6 @@
 		A821CD521B0AF4970053556E /* GameStatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A821CD511B0AF4970053556E /* GameStatsTests.swift */; };
 		A821CD5D1B0B0BD90053556E /* Clippers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A821CD5B1B0B0BD90053556E /* Clippers.jpg */; };
 		A821CD5E1B0B0BD90053556E /* Lakers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A821CD5C1B0B0BD90053556E /* Lakers.jpg */; };
-		A8B635251B10676E0075502C /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B635241B10676E0075502C /* CustomCell.swift */; };
 		A8D705D81B12FC9F00F4E471 /* Bucks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A8D705BD1B12FC9F00F4E471 /* Bucks.jpg */; };
 		A8D705D91B12FC9F00F4E471 /* Bulls.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A8D705BE1B12FC9F00F4E471 /* Bulls.jpg */; };
 		A8D705DA1B12FC9F00F4E471 /* Cavaliers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A8D705BF1B12FC9F00F4E471 /* Cavaliers.jpg */; };
@@ -45,6 +44,7 @@
 		A8D705F21B12FC9F00F4E471 /* Wizards.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A8D705D71B12FC9F00F4E471 /* Wizards.jpg */; };
 		A8D705F41B12FCBC00F4E471 /* 76ers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A8D705F31B12FCBC00F4E471 /* 76ers.jpg */; };
 		A8D705F71B137B5800F4E471 /* GameStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D705F61B137B5800F4E471 /* GameStatsView.swift */; };
+		A8DC4F8C1B183FA100041484 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC4F8B1B183FA100041484 /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +70,6 @@
 		A821CD511B0AF4970053556E /* GameStatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatsTests.swift; sourceTree = "<group>"; };
 		A821CD5B1B0B0BD90053556E /* Clippers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Clippers.jpg; path = GameStats/Images.xcassets/Clippers.jpg; sourceTree = "<group>"; };
 		A821CD5C1B0B0BD90053556E /* Lakers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Lakers.jpg; path = GameStats/Images.xcassets/Lakers.jpg; sourceTree = "<group>"; };
-		A8B635241B10676E0075502C /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCell.swift; path = ../CustomCell.swift; sourceTree = "<group>"; };
 		A8D705BD1B12FC9F00F4E471 /* Bucks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Bucks.jpg; path = GameStats/Images.xcassets/Bucks.jpg; sourceTree = "<group>"; };
 		A8D705BE1B12FC9F00F4E471 /* Bulls.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Bulls.jpg; path = GameStats/Images.xcassets/Bulls.jpg; sourceTree = "<group>"; };
 		A8D705BF1B12FC9F00F4E471 /* Cavaliers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Cavaliers.jpg; path = GameStats/Images.xcassets/Cavaliers.jpg; sourceTree = "<group>"; };
@@ -100,6 +99,7 @@
 		A8D705D71B12FC9F00F4E471 /* Wizards.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Wizards.jpg; path = GameStats/Images.xcassets/Wizards.jpg; sourceTree = "<group>"; };
 		A8D705F31B12FCBC00F4E471 /* 76ers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 76ers.jpg; path = GameStats/Images.xcassets/76ers.jpg; sourceTree = "<group>"; };
 		A8D705F61B137B5800F4E471 /* GameStatsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsView.swift; sourceTree = "<group>"; };
+		A8DC4F8B1B183FA100041484 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,8 +142,8 @@
 		A821CD381B0AF4970053556E /* GameStats */ = {
 			isa = PBXGroup;
 			children = (
+				A8DC4F8B1B183FA100041484 /* CustomCell.swift */,
 				A8D705F61B137B5800F4E471 /* GameStatsView.swift */,
-				A8B635241B10676E0075502C /* CustomCell.swift */,
 				A821CD3B1B0AF4970053556E /* AppDelegate.swift */,
 				A821CD3D1B0AF4970053556E /* ViewController.swift */,
 				A821CD3F1B0AF4970053556E /* Main.storyboard */,
@@ -347,8 +347,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A821CD3E1B0AF4970053556E /* ViewController.swift in Sources */,
-				A8B635251B10676E0075502C /* CustomCell.swift in Sources */,
 				A8D705F71B137B5800F4E471 /* GameStatsView.swift in Sources */,
+				A8DC4F8C1B183FA100041484 /* CustomCell.swift in Sources */,
 				A821CD3C1B0AF4970053556E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
