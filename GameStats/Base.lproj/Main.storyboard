@@ -196,7 +196,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="151" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eJT-Rm-IOd">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="151" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eJT-Rm-IOd">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -243,6 +243,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="eJT-Rm-IOd" secondAttribute="trailing" constant="-16" id="1hO-nt-f9c"/>
                             <constraint firstItem="eJT-Rm-IOd" firstAttribute="leading" secondItem="m6V-5N-Wps" secondAttribute="leadingMargin" constant="-16" id="Ntd-lR-f4Q"/>
                             <constraint firstItem="Qfa-qX-eWS" firstAttribute="top" secondItem="eJT-Rm-IOd" secondAttribute="bottom" id="VJ7-5b-B6f"/>
+                            <constraint firstItem="eJT-Rm-IOd" firstAttribute="top" secondItem="gxc-VO-WLe" secondAttribute="bottom" constant="-64" id="eYj-zm-3T6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TODAY'S GAMES" id="dpg-Tx-nrA"/>
