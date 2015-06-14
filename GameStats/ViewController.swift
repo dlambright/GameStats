@@ -13,8 +13,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var tblGames: UITableView!
     
-    var teamList : [String] = ["Nets", "Raptors", "Celtics", "Knicks", "76ers", "Hawks", "Heat", "Magic", "Hornets", "Wizards", "Bucks", "Cavaliers", "Pistons", "Bulls", "Pacers", "Kings", "Warriors", "Lakers", "Suns", "Clippers", "Jazz", "Thunder", "TrailBlazers", "Timberwolves", "Nuggets", "Spurs", "Rockets", "Grizzlies", "Pelicans", "Mavericks"]
-    
+    //var teamList : [String] = ["Nets", "Raptors", "Celtics", "Knicks", "76ers", "Hawks", "Heat", "Magic", "Hornets", "Wizards", "Bucks", "Cavaliers", "Pistons", "Bulls", "Pacers", "Kings", "Warriors", "Lakers", "Suns", "Clippers", "Jazz", "Thunder", "TrailBlazers", "Timberwolves", "Nuggets", "Spurs", "Rockets", "Grizzlies", "Pelicans", "Mavericks"]
+    var teamList: [String] = ["Hawks", "Mavericks"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -51,6 +51,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         var home: UIImage! = cell.picHomeTeam.image
         var away: UIImage! = cell.picAwayTeam.image
+        
+        gameStatsView.homeTeamURL = "ATL"
+        gameStatsView.awayTeamURL = "DAL"
         
         
         gameStatsView.populateGameStatsView(home, newAwayPicture:away)

@@ -2,8 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mUT-gZ-nBh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -20,162 +18,412 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clippers.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1zG-fd-SBN">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VSS-QC-1d0">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddb-c0-zMP">
+                                        <rect key="frame" x="16" y="178" width="576" height="21"/>
+                                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="FIELD GOALS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHX-K4-GAY">
+                                        <rect key="frame" x="16" y="207" width="576" height="21"/>
+                                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ASSISTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7x-st-9Yi">
+                                        <rect key="frame" x="16" y="380" width="576" height="21"/>
+                                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="REBOUNDS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heq-QB-7lX">
+                                        <rect key="frame" x="16" y="293" width="576" height="21"/>
+                                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="BLOCKS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OoS-a5-uqD">
+                                        <rect key="frame" x="16" y="351" width="576" height="21"/>
+                                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="STEALS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJh-2X-8i8">
+                                        <rect key="frame" x="16" y="322" width="576" height="21"/>
+                                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3-POINT FG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pd1-bB-ms6">
+                                        <rect key="frame" x="16" y="236" width="576" height="21"/>
+                                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="FREE THROWS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gB-WI-N4b">
+                                        <rect key="frame" x="16" y="264" width="576" height="21"/>
+                                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TRUE SHOOTING %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="188-BT-0Ce">
+                                        <rect key="frame" x="16" y="409" width="576" height="21"/>
+                                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WIN PROBABILITY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Orw-up-OD7">
+                                        <rect key="frame" x="16" y="438" width="576" height="21"/>
+                                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dO-Qd-4Ig">
+                                        <rect key="frame" x="16" y="178" width="38" height="21"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="12/24" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Azv-te-lco">
+                                        <rect key="frame" x="16" y="207" width="45" height="21"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="9/21" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIx-e7-2Kw">
+                                        <rect key="frame" x="16" y="235" width="38" height="21"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10/11" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2P-C9-Y5L">
+                                        <rect key="frame" x="16" y="264" width="45" height="21"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10/12/22" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyJ-bb-TLI">
+                                        <rect key="frame" x="16" y="293" width="72" height="21"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97I-Cu-5m2">
+                                        <rect key="frame" x="16" y="322" width="38" height="21"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5l-Qn-P11">
+                                        <rect key="frame" x="16" y="351" width="38" height="21"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="21" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qa-gR-I1g">
+                                        <rect key="frame" x="16" y="380" width="38" height="21"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=".518" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2St-F4-l69">
+                                        <rect key="frame" x="16" y="408" width="38" height="21"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="45%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5Q-SR-Vxa">
+                                        <rect key="frame" x="16" y="438" width="38" height="21"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ze-z9-ywu">
+                                        <rect key="frame" x="554" y="179" width="38" height="21"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="12/24" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="As7-bf-TjE">
+                                        <rect key="frame" x="542" y="207" width="45" height="21"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="9/21" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pek-y3-Pn0">
+                                        <rect key="frame" x="554" y="236" width="38" height="21"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10/11" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oD3-mD-bUY">
+                                        <rect key="frame" x="547" y="264" width="45" height="21"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10/12/22" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRo-Pu-eJf">
+                                        <rect key="frame" x="520" y="293" width="72" height="21"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="6" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGC-RJ-p8S">
+                                        <rect key="frame" x="549" y="321" width="38" height="21"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ygr-0a-nMF">
+                                        <rect key="frame" x="547" y="351" width="38" height="21"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="21" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMX-eW-x7W">
+                                        <rect key="frame" x="554" y="380" width="38" height="21"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=".518" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFe-IT-VDO">
+                                        <rect key="frame" x="550" y="409" width="38" height="21"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="45%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Z0-16-fvm">
+                                        <rect key="frame" x="554" y="438" width="38" height="21"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ygr-0a-nMF" firstAttribute="top" secondItem="TGC-RJ-p8S" secondAttribute="bottom" constant="8" id="0cv-Tz-FOo"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ddb-c0-zMP" secondAttribute="trailing" constant="8" id="0im-eQ-xMR"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Z0-16-fvm" secondAttribute="trailing" constant="16" id="0m0-97-B38"/>
+                                    <constraint firstAttribute="trailing" secondItem="SFe-IT-VDO" secondAttribute="trailing" constant="16" id="1DN-aY-vQY"/>
+                                    <constraint firstAttribute="trailing" secondItem="V7x-st-9Yi" secondAttribute="trailing" constant="8" id="1dq-IW-jcN"/>
+                                    <constraint firstItem="Ddb-c0-zMP" firstAttribute="leading" secondItem="VSS-QC-1d0" secondAttribute="leading" constant="8" id="2jW-br-dQG"/>
+                                    <constraint firstItem="heq-QB-7lX" firstAttribute="top" secondItem="3gB-WI-N4b" secondAttribute="bottom" constant="8" id="2vj-p2-Bf2"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Ze-z9-ywu" secondAttribute="trailing" constant="16" id="3Az-OB-vHd"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ddb-c0-zMP" secondAttribute="trailing" constant="8" id="4ab-L9-aKg"/>
+                                    <constraint firstAttribute="trailing" secondItem="TGC-RJ-p8S" secondAttribute="trailing" constant="16" id="6aa-EF-vWv"/>
+                                    <constraint firstItem="TGC-RJ-p8S" firstAttribute="top" secondItem="SRo-Pu-eJf" secondAttribute="bottom" constant="8" id="6lH-Fd-n9J"/>
+                                    <constraint firstItem="2St-F4-l69" firstAttribute="top" secondItem="3qa-gR-I1g" secondAttribute="bottom" constant="8" id="74g-Nm-fj3"/>
+                                    <constraint firstAttribute="trailing" secondItem="zJh-2X-8i8" secondAttribute="trailing" constant="8" id="9Xm-E2-IeO"/>
+                                    <constraint firstAttribute="trailing" secondItem="OoS-a5-uqD" secondAttribute="trailing" constant="8" id="AbP-U1-PKI"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ygr-0a-nMF" secondAttribute="trailing" constant="16" id="Awl-nD-z1k"/>
+                                    <constraint firstItem="SRo-Pu-eJf" firstAttribute="top" secondItem="oD3-mD-bUY" secondAttribute="bottom" constant="8" id="BBa-b1-oZl"/>
+                                    <constraint firstItem="gIx-e7-2Kw" firstAttribute="top" secondItem="Azv-te-lco" secondAttribute="bottom" constant="7" id="C1h-Yr-Cd4"/>
+                                    <constraint firstAttribute="centerX" secondItem="VHX-K4-GAY" secondAttribute="centerX" id="CPx-dh-HGU"/>
+                                    <constraint firstItem="3qa-gR-I1g" firstAttribute="top" secondItem="s5l-Qn-P11" secondAttribute="bottom" constant="8" id="DuA-TW-foU"/>
+                                    <constraint firstAttribute="centerX" secondItem="3gB-WI-N4b" secondAttribute="centerX" id="EHW-iM-x03"/>
+                                    <constraint firstItem="Azv-te-lco" firstAttribute="leading" secondItem="VSS-QC-1d0" secondAttribute="leading" constant="16" id="F5t-Pd-Rbt"/>
+                                    <constraint firstItem="s5l-Qn-P11" firstAttribute="top" secondItem="97I-Cu-5m2" secondAttribute="bottom" constant="8" id="Hoz-Vs-vkp"/>
+                                    <constraint firstAttribute="trailing" secondItem="As7-bf-TjE" secondAttribute="trailing" constant="16" id="J3y-hU-GLw"/>
+                                    <constraint firstAttribute="trailing" secondItem="188-BT-0Ce" secondAttribute="trailing" constant="8" id="KGp-U4-3s3"/>
+                                    <constraint firstItem="oMX-eW-x7W" firstAttribute="top" secondItem="Ygr-0a-nMF" secondAttribute="bottom" constant="8" id="LkN-wM-x4j"/>
+                                    <constraint firstItem="VHX-K4-GAY" firstAttribute="top" secondItem="Ddb-c0-zMP" secondAttribute="bottom" constant="8" id="MFC-Wf-Hzi"/>
+                                    <constraint firstItem="zJh-2X-8i8" firstAttribute="top" secondItem="heq-QB-7lX" secondAttribute="bottom" constant="8" id="MKm-xB-CY2"/>
+                                    <constraint firstAttribute="trailing" secondItem="pek-y3-Pn0" secondAttribute="trailing" constant="16" id="N8l-6Y-evJ"/>
+                                    <constraint firstItem="Orw-up-OD7" firstAttribute="leading" secondItem="VSS-QC-1d0" secondAttribute="leading" constant="8" id="NEz-Ll-Jmh"/>
+                                    <constraint firstItem="lyJ-bb-TLI" firstAttribute="leading" secondItem="VSS-QC-1d0" secondAttribute="leading" constant="16" id="OLR-uX-JPs"/>
+                                    <constraint firstItem="Ddb-c0-zMP" firstAttribute="leading" secondItem="VSS-QC-1d0" secondAttribute="leading" constant="8" id="OqL-ff-1HB"/>
+                                    <constraint firstItem="pd1-bB-ms6" firstAttribute="top" secondItem="VHX-K4-GAY" secondAttribute="bottom" constant="8" id="PgW-4z-LeX"/>
+                                    <constraint firstItem="V7x-st-9Yi" firstAttribute="top" secondItem="OoS-a5-uqD" secondAttribute="bottom" constant="8" id="QsM-BD-uIw"/>
+                                    <constraint firstItem="2St-F4-l69" firstAttribute="leading" secondItem="VSS-QC-1d0" secondAttribute="leading" constant="16" id="SUF-CJ-va5"/>
+                                    <constraint firstAttribute="centerX" secondItem="VHX-K4-GAY" secondAttribute="centerX" id="TJJ-wP-I6d"/>
+                                    <constraint firstAttribute="trailing" secondItem="heq-QB-7lX" secondAttribute="trailing" constant="8" id="TpO-9C-Uxh"/>
+                                    <constraint firstItem="As7-bf-TjE" firstAttribute="top" secondItem="6Ze-z9-ywu" secondAttribute="bottom" constant="8" id="VHm-ps-kr8"/>
+                                    <constraint firstItem="97I-Cu-5m2" firstAttribute="leading" secondItem="VSS-QC-1d0" secondAttribute="leading" constant="16" id="VoT-iq-17j"/>
+                                    <constraint firstItem="3gB-WI-N4b" firstAttribute="leading" secondItem="VSS-QC-1d0" secondAttribute="leading" constant="8" id="VvG-gX-rnF"/>
+                                    <constraint firstItem="188-BT-0Ce" firstAttribute="leading" secondItem="VSS-QC-1d0" secondAttribute="leading" constant="8" id="Vxh-76-zDW"/>
+                                    <constraint firstItem="oD3-mD-bUY" firstAttribute="top" secondItem="pek-y3-Pn0" secondAttribute="bottom" constant="8" id="WbZ-k6-Mfv"/>
+                                    <constraint firstItem="97I-Cu-5m2" firstAttribute="top" secondItem="lyJ-bb-TLI" secondAttribute="bottom" constant="8" id="WqX-4k-Smu"/>
+                                    <constraint firstItem="OoS-a5-uqD" firstAttribute="top" secondItem="zJh-2X-8i8" secondAttribute="bottom" constant="8" id="Yil-hx-JxP"/>
+                                    <constraint firstAttribute="trailing" secondItem="3gB-WI-N4b" secondAttribute="trailing" constant="8" id="ZIq-0u-PNH"/>
+                                    <constraint firstAttribute="trailing" secondItem="pd1-bB-ms6" secondAttribute="trailing" constant="8" id="ZJK-Re-pLU"/>
+                                    <constraint firstItem="3qa-gR-I1g" firstAttribute="leading" secondItem="VSS-QC-1d0" secondAttribute="leading" constant="16" id="a8P-lB-QD7"/>
+                                    <constraint firstItem="1dO-Qd-4Ig" firstAttribute="leading" secondItem="VSS-QC-1d0" secondAttribute="leading" constant="16" id="aKE-X0-kFt"/>
+                                    <constraint firstItem="V7x-st-9Yi" firstAttribute="leading" secondItem="VSS-QC-1d0" secondAttribute="leading" constant="8" id="aVl-Dd-yVr"/>
+                                    <constraint firstItem="R2P-C9-Y5L" firstAttribute="leading" secondItem="VSS-QC-1d0" secondAttribute="leading" constant="16" id="b0D-YO-Q0f"/>
+                                    <constraint firstItem="s5l-Qn-P11" firstAttribute="leading" secondItem="VSS-QC-1d0" secondAttribute="leading" constant="16" id="bmg-Xt-Mv9"/>
+                                    <constraint firstAttribute="trailing" secondItem="VHX-K4-GAY" secondAttribute="trailing" constant="8" id="cJI-pe-39q"/>
+                                    <constraint firstItem="3gB-WI-N4b" firstAttribute="top" secondItem="pd1-bB-ms6" secondAttribute="bottom" constant="8" id="dmg-Xf-g5C"/>
+                                    <constraint firstAttribute="trailing" secondItem="oD3-mD-bUY" secondAttribute="trailing" constant="16" id="fpl-sN-sbH"/>
+                                    <constraint firstItem="t5Q-SR-Vxa" firstAttribute="top" secondItem="2St-F4-l69" secondAttribute="bottom" constant="8" id="itp-kw-Qie"/>
+                                    <constraint firstItem="OoS-a5-uqD" firstAttribute="leading" secondItem="VSS-QC-1d0" secondAttribute="leading" constant="8" id="j3l-9g-cjY"/>
+                                    <constraint firstItem="Azv-te-lco" firstAttribute="top" secondItem="1dO-Qd-4Ig" secondAttribute="bottom" constant="8" id="jGd-iR-ihb"/>
+                                    <constraint firstItem="pek-y3-Pn0" firstAttribute="top" secondItem="As7-bf-TjE" secondAttribute="bottom" constant="8" id="k9k-Va-Nrb"/>
+                                    <constraint firstItem="heq-QB-7lX" firstAttribute="leading" secondItem="VSS-QC-1d0" secondAttribute="leading" constant="8" id="n3l-hE-Miw"/>
+                                    <constraint firstItem="pd1-bB-ms6" firstAttribute="leading" secondItem="VSS-QC-1d0" secondAttribute="leading" constant="8" id="nDw-9u-YHf"/>
+                                    <constraint firstItem="Ddb-c0-zMP" firstAttribute="leading" secondItem="1dO-Qd-4Ig" secondAttribute="trailing" constant="8" symbolic="YES" id="ofJ-1G-AhE"/>
+                                    <constraint firstItem="lyJ-bb-TLI" firstAttribute="top" secondItem="R2P-C9-Y5L" secondAttribute="bottom" constant="8" id="pn8-Vg-eMJ"/>
+                                    <constraint firstItem="VHX-K4-GAY" firstAttribute="leading" secondItem="VSS-QC-1d0" secondAttribute="leading" constant="8" id="ptj-RP-grq"/>
+                                    <constraint firstItem="188-BT-0Ce" firstAttribute="top" secondItem="V7x-st-9Yi" secondAttribute="bottom" constant="8" id="q7j-ko-HOu"/>
+                                    <constraint firstAttribute="trailing" secondItem="SRo-Pu-eJf" secondAttribute="trailing" constant="16" id="rPV-5p-KRQ"/>
+                                    <constraint firstItem="R2P-C9-Y5L" firstAttribute="top" secondItem="gIx-e7-2Kw" secondAttribute="bottom" constant="8" id="rRL-9U-fCo"/>
+                                    <constraint firstItem="SFe-IT-VDO" firstAttribute="top" secondItem="oMX-eW-x7W" secondAttribute="bottom" constant="8" id="s9z-UE-SP8"/>
+                                    <constraint firstAttribute="trailing" secondItem="Orw-up-OD7" secondAttribute="trailing" constant="8" id="uOi-py-6ep"/>
+                                    <constraint firstItem="Orw-up-OD7" firstAttribute="top" secondItem="188-BT-0Ce" secondAttribute="bottom" constant="8" id="v2L-rv-cZk"/>
+                                    <constraint firstItem="t5Q-SR-Vxa" firstAttribute="leading" secondItem="VSS-QC-1d0" secondAttribute="leading" constant="16" id="v4M-6H-5Hr"/>
+                                    <constraint firstItem="zJh-2X-8i8" firstAttribute="leading" secondItem="VSS-QC-1d0" secondAttribute="leading" constant="8" id="vp9-Oc-VDf"/>
+                                    <constraint firstAttribute="trailing" secondItem="oMX-eW-x7W" secondAttribute="trailing" constant="16" id="vvR-ut-zJ3"/>
+                                    <constraint firstItem="0Z0-16-fvm" firstAttribute="top" secondItem="SFe-IT-VDO" secondAttribute="bottom" constant="8" id="wGB-yL-S3A"/>
+                                    <constraint firstItem="gIx-e7-2Kw" firstAttribute="leading" secondItem="VSS-QC-1d0" secondAttribute="leading" constant="16" id="x74-YX-kye"/>
+                                    <constraint firstAttribute="centerX" secondItem="pd1-bB-ms6" secondAttribute="centerX" id="yA1-IJ-TAT"/>
+                                    <constraint firstAttribute="centerX" secondItem="Ddb-c0-zMP" secondAttribute="centerX" id="zRw-DS-gA9"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0im-eQ-xMR"/>
+                                        <exclude reference="2jW-br-dQG"/>
+                                        <exclude reference="ofJ-1G-AhE"/>
+                                        <exclude reference="TJJ-wP-I6d"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Clippers.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1zG-fd-SBN">
                                 <rect key="frame" x="16" y="72" width="150" height="150"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="RWa-sR-vNF"/>
                                     <constraint firstAttribute="width" constant="150" id="sH6-Pt-SfN"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lakers.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IEd-3j-IdO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Lakers.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IEd-3j-IdO">
                                 <rect key="frame" x="434" y="72" width="150" height="150"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="47t-4F-opl"/>
+                                    <constraint firstAttribute="height" constant="150" id="Ifs-NY-nYw"/>
                                     <constraint firstAttribute="width" constant="150" id="X6p-j8-LuT"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fs-RP-QtC">
-                                <rect key="frame" x="73" y="275" width="35" height="21"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="35/72" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BO-00-LmK">
-                                <rect key="frame" x="66" y="322" width="49" height="21"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5/23" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oo8-yi-oKf">
-                                <rect key="frame" x="69" y="369" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpW-Yj-yhF">
-                                <rect key="frame" x="85" y="411" width="10" height="21"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="98" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiO-j9-DLI">
-                                <rect key="frame" x="498" y="276" width="20" height="21"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="33/80" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwf-JV-LKE">
-                                <rect key="frame" x="482" y="323" width="53" height="21"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="8/15" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="los-ek-5Ug">
-                                <rect key="frame" x="487" y="371" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddb-c0-zMP">
-                                <rect key="frame" x="275" y="276" width="52" height="21"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SHOTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLn-qT-12w">
-                                <rect key="frame" x="275" y="324" width="52" height="21"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="REBOUNDS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0J-zX-Z3z">
-                                <rect key="frame" x="258" y="370" width="97" height="21"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TURNOVERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlj-mc-o8h">
-                                <rect key="frame" x="251" y="411" width="95" height="21"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WIN PROBABILITY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OsX-QQ-JPj">
-                                <rect key="frame" x="230" y="450" width="140" height="21"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCy-ed-PMJ">
-                                <rect key="frame" x="498" y="410" width="20" height="21"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="55%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yht-3Y-9EU">
-                                <rect key="frame" x="75" y="451" width="32" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="PIp-FN-kD8"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="45%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uv-A3-Myb">
-                                <rect key="frame" x="493" y="450" width="32" height="21"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.86825284089999999" green="0.86825284089999999" blue="0.86825284089999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="6Fs-RP-QtC" firstAttribute="top" secondItem="1zG-fd-SBN" secondAttribute="bottom" constant="53" id="1KD-Hf-2wv"/>
-                            <constraint firstItem="KpW-Yj-yhF" firstAttribute="top" secondItem="Oo8-yi-oKf" secondAttribute="bottom" constant="21" id="3du-2m-RSC"/>
-                            <constraint firstItem="1zG-fd-SBN" firstAttribute="top" secondItem="2d7-9z-lmI" secondAttribute="bottom" constant="8" symbolic="YES" id="6Fu-hO-xQq"/>
-                            <constraint firstItem="6Fs-RP-QtC" firstAttribute="leading" secondItem="1BO-00-LmK" secondAttribute="leading" constant="7" id="6YC-9g-YcF"/>
-                            <constraint firstItem="1zG-fd-SBN" firstAttribute="top" secondItem="IEd-3j-IdO" secondAttribute="top" id="6et-W8-G8c"/>
-                            <constraint firstItem="OsX-QQ-JPj" firstAttribute="leading" secondItem="dlj-mc-o8h" secondAttribute="trailing" constant="-116" id="8xG-xP-itq"/>
-                            <constraint firstItem="Ddb-c0-zMP" firstAttribute="baseline" secondItem="6Fs-RP-QtC" secondAttribute="baseline" constant="1" id="8xy-g2-6C4"/>
-                            <constraint firstItem="dlj-mc-o8h" firstAttribute="leading" secondItem="L0J-zX-Z3z" secondAttribute="leading" constant="-7" id="CEF-dR-DCq"/>
-                            <constraint firstItem="Yht-3Y-9EU" firstAttribute="centerX" secondItem="1zG-fd-SBN" secondAttribute="centerX" id="Dgy-EZ-kGe"/>
-                            <constraint firstItem="IEd-3j-IdO" firstAttribute="trailing" secondItem="XiO-j9-DLI" secondAttribute="trailing" constant="66" id="F32-ab-Pc7"/>
-                            <constraint firstItem="Ddb-c0-zMP" firstAttribute="top" secondItem="2d7-9z-lmI" secondAttribute="bottom" constant="212" id="Fq0-n8-zup"/>
-                            <constraint firstItem="Pwf-JV-LKE" firstAttribute="leading" secondItem="XiO-j9-DLI" secondAttribute="leading" constant="-16" id="IhI-1Z-52A"/>
-                            <constraint firstItem="Ddb-c0-zMP" firstAttribute="baseline" secondItem="XiO-j9-DLI" secondAttribute="firstBaseline" constant="1" id="ItG-hi-BHH"/>
-                            <constraint firstItem="1BO-00-LmK" firstAttribute="baseline" secondItem="YLn-qT-12w" secondAttribute="baseline" constant="-2" id="MA8-gI-jmX"/>
-                            <constraint firstItem="dlj-mc-o8h" firstAttribute="baseline" secondItem="KpW-Yj-yhF" secondAttribute="baseline" id="MEk-oJ-SPp"/>
-                            <constraint firstItem="OsX-QQ-JPj" firstAttribute="top" secondItem="dlj-mc-o8h" secondAttribute="bottom" constant="18" id="ODf-be-hGW"/>
-                            <constraint firstItem="1zG-fd-SBN" firstAttribute="leading" secondItem="U8a-SN-Zrc" secondAttribute="leadingMargin" id="Phf-Qk-cwD"/>
-                            <constraint firstItem="Ddb-c0-zMP" firstAttribute="baseline" secondItem="XiO-j9-DLI" secondAttribute="baseline" id="UR5-HM-ZqY"/>
-                            <constraint firstItem="L0J-zX-Z3z" firstAttribute="baseline" secondItem="los-ek-5Ug" secondAttribute="baseline" constant="-1" id="VZB-dQ-oFT"/>
-                            <constraint firstItem="dlj-mc-o8h" firstAttribute="centerX" secondItem="U8a-SN-Zrc" secondAttribute="centerX" constant="-1.5" id="X4C-x9-YLI"/>
-                            <constraint firstItem="Pwf-JV-LKE" firstAttribute="baseline" secondItem="YLn-qT-12w" secondAttribute="baseline" constant="-1" id="X4l-bH-LJk"/>
-                            <constraint firstItem="1BO-00-LmK" firstAttribute="top" secondItem="6Fs-RP-QtC" secondAttribute="bottom" constant="26" id="Xb6-Y4-ihN"/>
-                            <constraint firstItem="XiO-j9-DLI" firstAttribute="top" secondItem="IEd-3j-IdO" secondAttribute="bottom" constant="54" id="Zq5-45-I8E"/>
-                            <constraint firstItem="Yht-3Y-9EU" firstAttribute="leading" secondItem="U8a-SN-Zrc" secondAttribute="leadingMargin" constant="59" id="aRR-BI-Txo"/>
-                            <constraint firstItem="IEd-3j-IdO" firstAttribute="top" secondItem="2d7-9z-lmI" secondAttribute="bottom" constant="8" id="aTJ-Wt-Mr2"/>
-                            <constraint firstItem="1BO-00-LmK" firstAttribute="leading" secondItem="Oo8-yi-oKf" secondAttribute="leading" constant="-3" id="arG-0W-zED"/>
-                            <constraint firstItem="Oo8-yi-oKf" firstAttribute="leading" secondItem="KpW-Yj-yhF" secondAttribute="leading" constant="-16" id="f2I-9w-Fjc"/>
-                            <constraint firstItem="IEd-3j-IdO" firstAttribute="trailing" secondItem="U8a-SN-Zrc" secondAttribute="trailingMargin" id="foB-mm-3cJ"/>
-                            <constraint firstItem="Ddb-c0-zMP" firstAttribute="baseline" secondItem="6Fs-RP-QtC" secondAttribute="firstBaseline" constant="2" id="gsV-07-3mh"/>
-                            <constraint firstItem="Ddb-c0-zMP" firstAttribute="firstBaseline" secondItem="6Fs-RP-QtC" secondAttribute="baseline" id="lpA-Ml-bkI"/>
-                            <constraint firstItem="1zG-fd-SBN" firstAttribute="top" secondItem="2d7-9z-lmI" secondAttribute="bottom" constant="8" id="mep-yD-mRU"/>
-                            <constraint firstItem="L0J-zX-Z3z" firstAttribute="baseline" secondItem="Oo8-yi-oKf" secondAttribute="baseline" constant="1" id="qaV-qj-QBL"/>
-                            <constraint firstItem="los-ek-5Ug" firstAttribute="leading" secondItem="Pwf-JV-LKE" secondAttribute="leading" constant="5" id="sWG-E7-frg"/>
-                            <constraint firstItem="IEd-3j-IdO" firstAttribute="top" secondItem="2d7-9z-lmI" secondAttribute="bottom" constant="8" id="tOF-Df-syH"/>
-                            <constraint firstItem="1zG-fd-SBN" firstAttribute="leading" secondItem="6Fs-RP-QtC" secondAttribute="leading" constant="-57" id="tga-gt-t62"/>
-                            <constraint firstItem="YLn-qT-12w" firstAttribute="leading" secondItem="Ddb-c0-zMP" secondAttribute="leading" id="tzI-Iy-Uhh"/>
-                            <constraint firstItem="Yht-3Y-9EU" firstAttribute="top" secondItem="KpW-Yj-yhF" secondAttribute="bottom" constant="19" id="uA0-ZU-J6R"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8uv-A3-Myb" secondAttribute="trailing" constant="59" id="uvy-Hw-lAZ"/>
-                            <constraint firstItem="qCy-ed-PMJ" firstAttribute="baseline" secondItem="dlj-mc-o8h" secondAttribute="baseline" constant="-1" id="wTP-1l-E2i"/>
-                            <constraint firstItem="qCy-ed-PMJ" firstAttribute="leading" secondItem="los-ek-5Ug" secondAttribute="leading" constant="11" id="yg8-eq-xfE"/>
-                            <constraint firstItem="Oo8-yi-oKf" firstAttribute="top" secondItem="1BO-00-LmK" secondAttribute="bottom" constant="26" id="ygy-EJ-zrh"/>
-                            <constraint firstItem="L0J-zX-Z3z" firstAttribute="leading" secondItem="YLn-qT-12w" secondAttribute="leading" constant="-17" id="yjf-F4-Ahn"/>
-                            <constraint firstItem="8uv-A3-Myb" firstAttribute="top" secondItem="qCy-ed-PMJ" secondAttribute="bottom" constant="19" id="zmc-km-Hce"/>
-                            <constraint firstItem="1zG-fd-SBN" firstAttribute="top" secondItem="2d7-9z-lmI" secondAttribute="bottom" constant="8" id="zuE-Kd-Rlk"/>
+                            <constraint firstItem="VSS-QC-1d0" firstAttribute="top" secondItem="2d7-9z-lmI" secondAttribute="bottom" id="2VQ-iT-9V4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VSS-QC-1d0" secondAttribute="trailing" constant="-16" id="4OO-nD-pvF"/>
+                            <constraint firstItem="VSS-QC-1d0" firstAttribute="leading" secondItem="U8a-SN-Zrc" secondAttribute="leadingMargin" constant="-16" id="DZ8-Ls-tuh"/>
+                            <constraint firstItem="Wy6-s3-b3E" firstAttribute="top" secondItem="VSS-QC-1d0" secondAttribute="bottom" id="I0l-H9-clX"/>
+                            <constraint firstItem="IEd-3j-IdO" firstAttribute="top" secondItem="2d7-9z-lmI" secondAttribute="bottom" constant="8" id="KQn-BI-3RE"/>
+                            <constraint firstItem="Ddb-c0-zMP" firstAttribute="top" secondItem="1zG-fd-SBN" secondAttribute="bottom" constant="20" id="Lai-iO-1Qw"/>
+                            <constraint firstItem="1zG-fd-SBN" firstAttribute="top" secondItem="2d7-9z-lmI" secondAttribute="bottom" constant="8" id="O9S-eu-lvO"/>
+                            <constraint firstItem="1dO-Qd-4Ig" firstAttribute="top" secondItem="1zG-fd-SBN" secondAttribute="bottom" constant="20" id="XCZ-7q-79Y"/>
+                            <constraint firstItem="6Ze-z9-ywu" firstAttribute="top" secondItem="IEd-3j-IdO" secondAttribute="bottom" constant="20" id="nd4-1z-uGO"/>
+                            <constraint firstItem="1zG-fd-SBN" firstAttribute="leading" secondItem="U8a-SN-Zrc" secondAttribute="leadingMargin" constant="-8" id="ol2-Ag-BrC"/>
+                            <constraint firstItem="IEd-3j-IdO" firstAttribute="trailing" secondItem="U8a-SN-Zrc" secondAttribute="trailingMargin" constant="8" id="xQN-w4-c13"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VnM-dY-BCa"/>
                     <connections>
+                        <outlet property="lblAway3pt" destination="pek-y3-Pn0" id="tJW-sR-8rn"/>
+                        <outlet property="lblAwayAssists" destination="oMX-eW-x7W" id="19c-ae-uHk"/>
+                        <outlet property="lblAwayBlocks" destination="Ygr-0a-nMF" id="Ly5-0h-UNg"/>
+                        <outlet property="lblAwayFG" destination="As7-bf-TjE" id="aE6-kr-gIC"/>
+                        <outlet property="lblAwayFT" destination="oD3-mD-bUY" id="qTy-s4-kJ3"/>
+                        <outlet property="lblAwayRebounds" destination="SRo-Pu-eJf" id="UAL-te-rf1"/>
+                        <outlet property="lblAwayScore" destination="6Ze-z9-ywu" id="kKc-Ui-jVG"/>
+                        <outlet property="lblAwaySteals" destination="TGC-RJ-p8S" id="0WB-0n-IEu"/>
+                        <outlet property="lblAwayTSP" destination="SFe-IT-VDO" id="4aX-bh-csE"/>
+                        <outlet property="lblAwayWinProb" destination="0Z0-16-fvm" id="Qpk-5Z-a6r"/>
+                        <outlet property="lblHome3pt" destination="gIx-e7-2Kw" id="1lV-kK-uHn"/>
+                        <outlet property="lblHomeAssists" destination="3qa-gR-I1g" id="RHL-tq-jwi"/>
+                        <outlet property="lblHomeBlocks" destination="s5l-Qn-P11" id="mk5-ir-UEn"/>
+                        <outlet property="lblHomeFG" destination="Azv-te-lco" id="Pfa-Ad-Uzf"/>
+                        <outlet property="lblHomeFT" destination="R2P-C9-Y5L" id="nhe-fe-o0k"/>
+                        <outlet property="lblHomeRebounds" destination="lyJ-bb-TLI" id="jTn-Xn-6gT"/>
+                        <outlet property="lblHomeScore" destination="1dO-Qd-4Ig" id="vXY-nf-wGI"/>
+                        <outlet property="lblHomeSteals" destination="TGC-RJ-p8S" id="fas-kD-B1l"/>
+                        <outlet property="lblHomeTSP" destination="2St-F4-l69" id="kDj-Td-eOp"/>
+                        <outlet property="lblHomeWinProb" destination="t5Q-SR-Vxa" id="k2r-Hh-kSl"/>
+                        <outlet property="navBar" destination="VnM-dY-BCa" id="VAX-kc-Po2"/>
                         <outlet property="picAwayTeam" destination="IEd-3j-IdO" id="XG9-W0-AzT"/>
                         <outlet property="picHomeTeam" destination="1zG-fd-SBN" id="7IU-Ls-GAJ"/>
                     </connections>
@@ -211,12 +459,24 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="bDU-mK-eBr"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bVV-q4-KJ0">
                                                     <rect key="frame" x="472" y="15" width="120" height="120"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="3bC-BL-BXL"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
