@@ -44,22 +44,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if(segue.identifier == "TableToDetailSegue"){
+            let navBar:UINavigationController = segue.destinationViewController as! UINavigationController
+            let gameStatsView:GameStatsView = navBar.viewControllers[0] as! GameStatsView
+            var cell :CustomCell = sender as! CustomCell
+            
+            var home: UIImage! = cell.picHomeTeam.image
+            var away: UIImage! = cell.picAwayTeam.image
+            
+            gameStatsView.homeTeamURL = "ATL"
+            gameStatsView.awayTeamURL = "DAL"
+            
+            
+            gameStatsView.populateGameStatsView(home, newAwayPicture:away)
+        }
         
-        let navBar:UINavigationController = segue.destinationViewController as! UINavigationController
-        let gameStatsView:GameStatsView = navBar.viewControllers[0] as! GameStatsView
-        var cell :CustomCell = sender as! CustomCell
+
         
-        var home: UIImage! = cell.picHomeTeam.image
-        var away: UIImage! = cell.picAwayTeam.image
-        
-        gameStatsView.homeTeamURL = "ATL"
-        gameStatsView.awayTeamURL = "DAL"
-        
-        
-        gameStatsView.populateGameStatsView(home, newAwayPicture:away)
-        
-        if (segue.identifier == "Show") {
-            // pass data to next view
+        if (segue.identifier == "AboutSegue") {
+            // Just go to the page.  Nothing speical, yet.
         }
     }
 

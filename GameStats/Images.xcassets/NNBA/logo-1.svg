@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 453.4 453.4" enable-background="new 0 0 453.4 453.4" xml:space="preserve">
+<g id="Layer_1">
+	<circle fill="#FF5B00" cx="226.7" cy="226.7" r="220.7"/>
+</g>
+<g id="Layer_3">
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="226.6897" y1="94.6963" x2="226.6897" y2="331.8159">
+		<stop  offset="0" style="stop-color:#FF8A00"/>
+		<stop  offset="0.3221" style="stop-color:#FF7700"/>
+		<stop  offset="0.5637" style="stop-color:#F25A00"/>
+		<stop  offset="1" style="stop-color:#DB2900"/>
+	</linearGradient>
+	<circle fill="url(#SVGID_1_)" cx="226.7" cy="226.7" r="220.7"/>
+</g>
+<g id="Layer_5">
+	<path fill="#F8FF33" d="M226.7,226.7L88.4,54.7c0,0,33.7-27.6,64.8-36.1s75.7-12.8,75.7-12.8L226.7,226.7"/>
+	<polyline fill="#3DD973" points="226.7,226.7 89.8,53.5 125.4,30.6 181.7,10.6 226.7,226.7 	"/>
+	<polyline fill="#267CDE" points="226.7,226.7 37.5,112.9 62.7,78.9 123.6,36.9 226.7,226.7 	"/>
+	<path fill="#B9002E" d="M226.7,226.7L37.5,112.9c0,0-17.3,28-22.9,52.3s-8.5,68.8-8.5,68.8L226.7,226.7"/>
+	<path fill="#B9002E" d="M226.7,226.7L6,228.6c0,0,0,43.6,13.1,73c5.6,12.6,36,75.7,78.7,104.2c56.9,38.1,128.9,41.6,128.9,41.6
+		V226.7"/>
+</g>
+<g id="Layer_2">
+	<g>
+		<defs>
+			<circle id="SVGID_2_" cx="226.7" cy="226.7" r="220.7"/>
+		</defs>
+		<clipPath id="SVGID_3_">
+			<use xlink:href="#SVGID_2_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_3_)">
+			<path fill="none" stroke="#540000" stroke-width="12" stroke-miterlimit="10" d="M418.3,24.7c0,0-107.4,79.2-107.4,203.8
+				s107.4,203.8,107.4,203.8l-191.6,26.1V226.7v-228L35.1,24.7c0,0,107.4,79.2,107.4,203.8S35.1,432.3,35.1,432.3L-3.2,228.5h459.8"
+				/>
+		</g>
+		<use xlink:href="#SVGID_2_"  overflow="visible" fill="none" stroke="#540000" stroke-width="12" stroke-miterlimit="10"/>
+	</g>
+</g>
+<g id="Layer_4" display="none">
+	<g display="inline">
+		<defs>
+			<circle id="SVGID_4_" cx="226.7" cy="226.7" r="220.7"/>
+		</defs>
+		<clipPath id="SVGID_5_">
+			<use xlink:href="#SVGID_4_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_5_)">
+			<path fill="none" stroke="#000000" stroke-width="12" stroke-miterlimit="10" d="M418.3,24.7c0,0-107.4,79.2-107.4,203.8
+				s107.4,203.8,107.4,203.8l-191.6,26.1V226.7v-228L35.1,24.7c0,0,107.4,79.2,107.4,203.8S35.1,432.3,35.1,432.3L-3.2,228.5h459.8"
+				/>
+		</g>
+		<use xlink:href="#SVGID_4_"  overflow="visible" fill="none" stroke="#000000" stroke-width="12" stroke-miterlimit="10"/>
+	</g>
+</g>
+</svg>

@@ -52,8 +52,8 @@ class GameStatsView: UIViewController {
         picAwayTeam.image = awayTeamImage
         navBar.title = homeTeamURL + "     vs     " + awayTeamURL
         
-        getHomeTeamData()
-        getAwayTeamData()
+        //getHomeTeamData()
+        //getAwayTeamData()
         
         
     }
@@ -108,10 +108,10 @@ class GameStatsView: UIViewController {
     }
     
     func getHomeTeamData()->Void{
-        let dataString : NSString! = readHTML("127.0.0.1/" + homeTeamURL)
-        
+        let dataString : NSString! = readHTML("192.168.1.81/" + homeTeamURL)
+        println(dataString)
         let lines = dataString.componentsSeparatedByString(", ")
-        var TSP :Float = lines[36].floatValue
+        var TSP :Float = lines[35].floatValue
         TSP = Float(round(1000*TSP)/10)
         
         
@@ -133,7 +133,7 @@ class GameStatsView: UIViewController {
     }
     
     func getAwayTeamData()->Void{
-        let dataString : NSString! = readHTML("127.0.0.1/" + awayTeamURL)
+        let dataString : NSString! = readHTML("192.168.1.81/" + awayTeamURL)
         
         let lines = dataString.componentsSeparatedByString(", ")
         var TSP :Float = lines[36].floatValue
