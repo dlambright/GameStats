@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GameStatsView: UIViewController {
+class GameStatsView: UIViewController{
 
     @IBOutlet var navBar: UINavigationItem!
 
@@ -20,6 +20,8 @@ class GameStatsView: UIViewController {
     
     var homeTeamURL: String!
     var awayTeamURL: String!
+    
+    var killThread: Bool = false
     
     var statsLine: String!
     
@@ -52,10 +54,18 @@ class GameStatsView: UIViewController {
         picAwayTeam.image = awayTeamImage
         navBar.title = homeTeamURL + "     vs     " + awayTeamURL
         
-        //getHomeTeamData()
-        //getAwayTeamData()
-        
-        
+        getHomeTeamData()
+        getAwayTeamData()
+
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        refreshData()
+        killThread = false
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        killThread = true
     }
     
     func populateGameStatsView(newHomePicture: UIImage, newAwayPicture: UIImage) ->Void{
@@ -101,7 +111,7 @@ class GameStatsView: UIViewController {
         if (error != nil) {
             println("whoops, something went wrong")
         } else {
-            println(html!)
+            //println(html!)
             return html!
         }
         return html!
@@ -109,25 +119,32 @@ class GameStatsView: UIViewController {
     
     func getHomeTeamData()->Void{
         let dataString : NSString! = readHTML("192.168.1.81/" + homeTeamURL)
-        println(dataString)
-        let lines = dataString.componentsSeparatedByString(", ")
-        var TSP :Float = lines[35].floatValue
+        
+        
+        let lines = dataString.componentsSeparatedByString("\n")
+        
+
+        let mostRecentData = lines[(lines.count-3)].componentsSeparatedByString(",")
+
+        var TSP :Float = mostRecentData[36].floatValue
+        var foulShots : Float = mostRecentData[9].floatValue * 0.44
+        TSP = mostRecentData[0].floatValue / (2 * (mostRecentData[3].floatValue+(0.44 * mostRecentData[9].floatValue)))
         TSP = Float(round(1000*TSP)/10)
         
         
-        populateHomeTeam(lines[0] as! String,
-            newFGMade: lines[2] as! String,
-            newFGAttempted: lines[3] as! String,
-            new3PMade: lines[5] as! String,
-            new3PAttempted: lines[6] as! String,
-            newFTMade: lines[8] as! String,
-            newFTAttempted: lines[9] as! String,
-            newDReb: lines[12] as! String,
-            newOReb: lines[11] as! String,
-            newTotalReb: lines[13] as! String,
-            newSteals: lines[15] as! String,
-            newBlocks: lines[16] as! String,
-            newAssists: lines[14] as! String,
+        populateHomeTeam(mostRecentData[0] as! String,
+            newFGMade: mostRecentData[2] as! String,
+            newFGAttempted: mostRecentData[3] as! String,
+            new3PMade: mostRecentData[5] as! String,
+            new3PAttempted: mostRecentData[6] as! String,
+            newFTMade: mostRecentData[8] as! String,
+            newFTAttempted: mostRecentData[9] as! String,
+            newDReb: mostRecentData[12] as! String,
+            newOReb: mostRecentData[11] as! String,
+            newTotalReb: mostRecentData[13] as! String,
+            newSteals: mostRecentData[15] as! String,
+            newBlocks: mostRecentData[16] as! String,
+            newAssists: mostRecentData[14] as! String,
             newTSP: TSP.description + "%",
             newWinProb: "TBD")
     }
@@ -135,26 +152,45 @@ class GameStatsView: UIViewController {
     func getAwayTeamData()->Void{
         let dataString : NSString! = readHTML("192.168.1.81/" + awayTeamURL)
         
-        let lines = dataString.componentsSeparatedByString(", ")
-        var TSP :Float = lines[36].floatValue
+        let lines = dataString.componentsSeparatedByString("\n")
+        let mostRecentData = lines[(lines.count-3)].componentsSeparatedByString(",")
+        
+        var TSP :Float = mostRecentData[36].floatValue
+        var foulShots : Float = mostRecentData[9].floatValue * 0.44
+        TSP = mostRecentData[0].floatValue / (2 * (mostRecentData[3].floatValue+(0.44 * mostRecentData[9].floatValue)))
         TSP = Float(round(1000*TSP)/10)
         
         
-        populateAwayTeam(lines[0] as! String,
-            newFGMade: lines[2] as! String,
-            newFGAttempted: lines[3] as! String,
-            new3PMade: lines[5] as! String,
-            new3PAttempted: lines[6] as! String,
-            newFTMade: lines[8] as! String,
-            newFTAttempted: lines[9] as! String,
-            newDReb: lines[12] as! String,
-            newOReb: lines[11] as! String,
-            newTotalReb: lines[13] as! String,
-            newSteals: lines[15] as! String,
-            newBlocks: lines[16] as! String,
-            newAssists: lines[14] as! String,
+        populateAwayTeam(mostRecentData[0] as! String,
+            newFGMade: mostRecentData[2] as! String,
+            newFGAttempted: mostRecentData[3] as! String,
+            new3PMade: mostRecentData[5] as! String,
+            new3PAttempted: mostRecentData[6] as! String,
+            newFTMade: mostRecentData[8] as! String,
+            newFTAttempted: mostRecentData[9] as! String,
+            newDReb: mostRecentData[12] as! String,
+            newOReb: mostRecentData[11] as! String,
+            newTotalReb: mostRecentData[13] as! String,
+            newSteals: mostRecentData[15] as! String,
+            newBlocks: mostRecentData[16] as! String,
+            newAssists: mostRecentData[14] as! String,
             newTSP: TSP.description + "%",
             newWinProb: "TBD")
     }
     
+    
+    func refreshData(){
+        let qualityOfServiceClass = Int(QOS_CLASS_BACKGROUND.value)
+        let backgroundQueue = dispatch_get_global_queue(qualityOfServiceClass, 0)
+        dispatch_async(dispatch_get_global_queue(qualityOfServiceClass,0)){ () -> Void in
+            
+            while self.killThread == false{
+                sleep(2)
+                dispatch_async(dispatch_get_main_queue()){
+                    self.getAwayTeamData()
+                    self.getHomeTeamData()
+                }
+            }
+        }
+    }
 }

@@ -13,4 +13,7 @@ class CustomCell: UITableViewCell {
 
     @IBOutlet weak var picHomeTeam: UIImageView!
     @IBOutlet weak var picAwayTeam: UIImageView!
+    var homeTeam : String!
+    var awayTeam : String!
+
 }

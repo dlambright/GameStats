@@ -14,8 +14,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tblGames: UITableView!
     
     //var teamList : [String] = ["Nets", "Raptors", "Celtics", "Knicks", "76ers", "Hawks", "Heat", "Magic", "Hornets", "Wizards", "Bucks", "Cavaliers", "Pistons", "Bulls", "Pacers", "Kings", "Warriors", "Lakers", "Suns", "Clippers", "Jazz", "Thunder", "TrailBlazers", "Timberwolves", "Nuggets", "Spurs", "Rockets", "Grizzlies", "Pelicans", "Mavericks"]
-    var teamList: [String] = ["Hawks", "Mavericks"]
+    var teamList: [String] = []
     override func viewDidLoad() {
+        getTodaysGames()
         super.viewDidLoad()
 
         self.tblGames.dataSource = self
@@ -39,21 +40,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         var awayIndex = teamList[(2 * indexPath.row) + 1] + ".jpg"
         cell.picHomeTeam.image = UIImage(named: homeIndex)
         cell.picAwayTeam.image = UIImage(named: awayIndex)
-    
+        cell.homeTeam = teamList[2 * indexPath.row]
+        cell.awayTeam = teamList[2 * indexPath.row + 1]
         return cell
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if(segue.identifier == "TableToDetailSegue"){
-            let navBar:UINavigationController = segue.destinationViewController as! UINavigationController
-            let gameStatsView:GameStatsView = navBar.viewControllers[0] as! GameStatsView
+            let gameStatsView:GameStatsView = segue.destinationViewController as! GameStatsView
             var cell :CustomCell = sender as! CustomCell
             
             var home: UIImage! = cell.picHomeTeam.image
             var away: UIImage! = cell.picAwayTeam.image
-            
-            gameStatsView.homeTeamURL = "ATL"
-            gameStatsView.awayTeamURL = "DAL"
+        
+            gameStatsView.homeTeamURL = cell.homeTeam
+            gameStatsView.awayTeamURL = cell.awayTeam
             
             
             gameStatsView.populateGameStatsView(home, newAwayPicture:away)
@@ -65,6 +66,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             // Just go to the page.  Nothing speical, yet.
         }
     }
+    
+    func getTodaysGames(){
+        let dataString : NSString! = readHTML("192.168.1.81/todaysGames")
+        teamList = dataString.componentsSeparatedByString(" ") as! [String]
+    }
 
+    func readHTML(givenURL: String)->NSString{
+        let url = NSURL(string: "http://" + givenURL)
+        var error: NSError?
+        let html = NSString(contentsOfURL: url!, encoding: NSUTF8StringEncoding, error: &error)
+        
+        if (error != nil) {
+            println("whoops, something went wrong")
+        } else {
+            //println(html!)
+            return html!
+        }
+        return html!
+    }
 }
 
