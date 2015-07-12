@@ -6,24 +6,35 @@
 //  Copyright (c) 2015 Charlie Buckets. All rights reserved.
 //
 
+import QuartzCore
 import UIKit
+import JBChart
 
-class GameStatsView: UIViewController{
+
+//enum with team name, 
+
+class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartViewDelegate{
 
     @IBOutlet var navBar: UINavigationItem!
 
     @IBOutlet weak var picHomeTeam: UIImageView!
     @IBOutlet weak var picAwayTeam: UIImageView!
- 
+    @IBOutlet var lblGraph: UILabel!
+    
     var homeTeamImage: UIImage!
     var awayTeamImage: UIImage!
     
     var homeTeamURL: String!
     var awayTeamURL: String!
     
+    var homeTeamData = [Float]()
+    var awayTeamData = [Float]()
+    
     var killThread: Bool = false
     
     var statsLine: String!
+    
+    @IBOutlet var lineChart: JBLineChartView!
     
     @IBOutlet var lblHomeScore: UILabel!
     @IBOutlet var lblHomeFG: UILabel!
@@ -48,14 +59,27 @@ class GameStatsView: UIViewController{
     @IBOutlet var lblAwayWinProb: UILabel!
     
     
+    //~*~*~ JBChart Variables
+    var chartLegend = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    
+    
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         picHomeTeam.image = homeTeamImage
         picAwayTeam.image = awayTeamImage
-        navBar.title = homeTeamURL + "     vs     " + awayTeamURL
+        navBar.title = homeTeamURL + "  vs  " + awayTeamURL
         
         getHomeTeamData()
         getAwayTeamData()
+    
+        
+        setUpGraph()
 
     }
     
@@ -118,7 +142,7 @@ class GameStatsView: UIViewController{
     }
     
     func getHomeTeamData()->Void{
-        let dataString : NSString! = readHTML("192.168.1.81/" + homeTeamURL)
+        let dataString : NSString! = readHTML("127.0.0.1/" + homeTeamURL)
         
         
         let lines = dataString.componentsSeparatedByString("\n")
@@ -150,7 +174,7 @@ class GameStatsView: UIViewController{
     }
     
     func getAwayTeamData()->Void{
-        let dataString : NSString! = readHTML("192.168.1.81/" + awayTeamURL)
+        let dataString : NSString! = readHTML("127.0.0.1/" + awayTeamURL)
         
         let lines = dataString.componentsSeparatedByString("\n")
         let mostRecentData = lines[(lines.count-3)].componentsSeparatedByString(",")
@@ -189,8 +213,122 @@ class GameStatsView: UIViewController{
                 dispatch_async(dispatch_get_main_queue()){
                     self.getAwayTeamData()
                     self.getHomeTeamData()
+                    self.getDataAtColmun(0)
                 }
             }
         }
     }
+    
+    @IBAction func buttonTapped(sender: UIButton){
+        lblGraph.text = sender.titleLabel?.text
+    }
+    
+    func setUpGraph(){
+        lineChart.backgroundColor = UIColor.whiteColor()
+        lineChart.delegate = self
+        lineChart.dataSource = self
+        lineChart.minimumValue = 0
+        lineChart.maximumValue = 100
+        lineChart.reloadData()
+        
+        getDataAtColmun(0)
+        showChart()
+        
+    }
+    
+    func graphStuff(){
+        
+    }
+    
+    func hideChart(){
+        lineChart.setState(.Collapsed, animated: true)
+    }
+    
+    func showChart(){
+        lineChart.setState(.Expanded, animated: true)
+    }
+    
+    func numberOfLinesInLineChartView(lineChartView: JBLineChartView!) -> UInt {
+        return 2
+    }
+    
+    func lineChartView(lineChartView: JBLineChartView!, verticalValueForHorizontalIndex horizontalIndex: UInt, atLineIndex lineIndex: UInt) -> CGFloat {
+        if (lineIndex == 0){
+            return CGFloat(awayTeamData[Int(horizontalIndex)])
+        }
+        else if (lineIndex == 1){
+            return CGFloat(homeTeamData[Int(horizontalIndex)])
+        }
+        return 0
+    }
+    
+    func lineChartView(lineChartView: JBLineChartView!, colorForLineAtLineIndex lineIndex: UInt) -> UIColor! {
+        if(lineIndex == 0){
+            return UIColor.redColor()
+        }
+        else if (lineIndex == 1){
+            return UIColor.blueColor()
+        }
+        
+        return UIColor.whiteColor()
+    }
+    
+    func lineChartView(lineChartView: JBLineChartView!, showsDotsForLineAtLineIndex lineIndex: UInt) -> Bool {
+        return false
+    }
+    
+    func lineChartView(lineChartView: JBLineChartView!, colorForDotAtHorizontalIndex horizontalIndex: UInt, atLineIndex lineIndex: UInt) -> UIColor! {
+        return UIColor.lightGrayColor()
+    }
+
+    func lineChartView(lineChartView: JBLineChartView!, smoothLineAtLineIndex lineIndex: UInt) -> Bool {
+        return false
+    }
+    
+    func lineChartView(lineChartView: JBLineChartView!, didSelectLineAtIndex lineIndex: UInt, horizontalIndex: UInt) {
+        if (lineIndex == 0){
+            let homeData = homeTeamData[Int(horizontalIndex)]
+            let awayData = awayTeamData[Int(horizontalIndex)]
+            //let key = chartLegend[Int(horizontalIndex)]
+        }
+    }
+    
+    func lineChartView(lineChartView: JBLineChartView!, numberOfVerticalValuesAtLineIndex lineIndex: UInt) -> UInt {
+        if (lineIndex == 0){
+            return UInt(awayTeamData.count)
+        }
+        else if (lineIndex == 1){
+            return UInt(homeTeamData.count)
+        }
+        return 0
+    }
+    
+    func getDataAtColmun(index: Int){
+        awayTeamData = []
+        var dataString : NSString! = readHTML("127.0.0.1/" + awayTeamURL)
+        
+        var lines = dataString.componentsSeparatedByString("\n")
+        
+        for line in lines{
+            let currentData = line.componentsSeparatedByString(",")
+            awayTeamData.append(currentData[index].floatValue)
+            
+        }
+        
+        
+        homeTeamData = []
+        dataString = readHTML("127.0.0.1/" + homeTeamURL)
+        
+        lines = dataString.componentsSeparatedByString("\n")
+        
+        for line in lines{
+            let currentData = line.componentsSeparatedByString(",")
+            homeTeamData.append(currentData[index].floatValue)
+        }
+        
+        lineChart.reloadData()
+        
+    }
+
 }
+

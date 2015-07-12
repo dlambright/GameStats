@@ -68,7 +68,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func getTodaysGames(){
-        let dataString : NSString! = readHTML("192.168.1.81/todaysGames")
+        let dataString : NSString! = readHTML("127.0.0.1/todaysGames")
         teamList = dataString.componentsSeparatedByString(" ") as! [String]
     }
 
