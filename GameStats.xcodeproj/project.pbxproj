@@ -25,6 +25,7 @@
 		A873B0121B51C2DC005C6BE7 /* JBChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = A873B00C1B51C2DC005C6BE7 /* JBChartView.m */; };
 		A873B0131B51C2DC005C6BE7 /* JBLineChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = A873B00D1B51C2DC005C6BE7 /* JBLineChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A873B0141B51C2DC005C6BE7 /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = A873B00E1B51C2DC005C6BE7 /* JBLineChartView.m */; };
+		A877B0271B555BAD0065CD9B /* GameStatsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A877B0261B555BAD0065CD9B /* GameStatsConstants.swift */; };
 		A89BB79C1B4CD9B9009D95CA /* AtlantaHawks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A89BB77E1B4CD9B9009D95CA /* AtlantaHawks.jpg */; };
 		A89BB79D1B4CD9B9009D95CA /* BostonCeltics.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A89BB77F1B4CD9B9009D95CA /* BostonCeltics.jpg */; };
 		A89BB79E1B4CD9B9009D95CA /* BrooklynNets.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A89BB7801B4CD9B9009D95CA /* BrooklynNets.jpg */; };
@@ -129,6 +130,7 @@
 		A873B00C1B51C2DC005C6BE7 /* JBChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartView.m; sourceTree = "<group>"; };
 		A873B00D1B51C2DC005C6BE7 /* JBLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartView.h; sourceTree = "<group>"; };
 		A873B00E1B51C2DC005C6BE7 /* JBLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartView.m; sourceTree = "<group>"; };
+		A877B0261B555BAD0065CD9B /* GameStatsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsConstants.swift; sourceTree = "<group>"; };
 		A89BB77E1B4CD9B9009D95CA /* AtlantaHawks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = AtlantaHawks.jpg; path = GameStats/Images.xcassets/Teams/AtlantaHawks.jpg; sourceTree = "<group>"; };
 		A89BB77F1B4CD9B9009D95CA /* BostonCeltics.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = BostonCeltics.jpg; path = GameStats/Images.xcassets/Teams/BostonCeltics.jpg; sourceTree = "<group>"; };
 		A89BB7801B4CD9B9009D95CA /* BrooklynNets.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = BrooklynNets.jpg; path = GameStats/Images.xcassets/Teams/BrooklynNets.jpg; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				A821CD3D1B0AF4970053556E /* ViewController.swift */,
 				A821CD3F1B0AF4970053556E /* Main.storyboard */,
 				A821CD391B0AF4970053556E /* Supporting Files */,
+				A877B0261B555BAD0065CD9B /* GameStatsConstants.swift */,
 			);
 			path = GameStats;
 			sourceTree = "<group>";
@@ -560,6 +563,7 @@
 				A8D705F71B137B5800F4E471 /* GameStatsView.swift in Sources */,
 				A8DC4F8C1B183FA100041484 /* CustomCell.swift in Sources */,
 				A821CD3C1B0AF4970053556E /* AppDelegate.swift in Sources */,
+				A877B0271B555BAD0065CD9B /* GameStatsConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -884,6 +888,7 @@
 				A873B0021B51C240005C6BE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A873B0071B51C240005C6BE7 /* Build configuration list for PBXNativeTarget "JBChartTests" */ = {
 			isa = XCConfigurationList;
@@ -892,6 +897,7 @@
 				A873B0041B51C240005C6BE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

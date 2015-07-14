@@ -18,52 +18,6 @@ import JBChart
 
 class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartViewDelegate{
     
-    var primaryColors:[String:UIColor] = ["AtlantaHawks": UIColor(red: 225/255 , green: 58/255 , blue: 62/255 , alpha: 1),
-        "BostonCeltics": UIColor(red: 0/255 , green: 131/255 , blue: 72/255 , alpha: 1),
-        "BrooklynNets": UIColor(red: 6/255 , green: 25/255 , blue: 34/255 , alpha: 1),
-        "CharlotteHornets": UIColor(red: 29/255 , green: 17/255 , blue: 96/255 , alpha: 1),
-        "ChicagoBulls": UIColor(red: 206/255 , green: 17/255 , blue: 65/255 , alpha: 1),
-        "ClevelandCavaliers": UIColor(red: 134/255 , green: 0/255 , blue: 56/255 , alpha: 1),
-        "DallasMavericks": UIColor(red: 0/255 , green: 125/255 , blue: 197/255 , alpha: 1),
-        "DenverNuggets": UIColor(red: 77/255 , green: 144/255 , blue: 205/255 , alpha: 1),
-        "DetroitPistons": UIColor(red: 237/255 , green: 23/255 , blue: 76/255 , alpha: 1),
-        "GoldenStateWarriors": UIColor(red: 253/255 , green: 185/255 , blue: 39/255 , alpha: 1),
-        "HoustonRockets": UIColor(red: 206/255 , green: 17/255 , blue: 65/255 , alpha: 1),
-        "IndianaPacers": UIColor(red: 255/255 , green: 198/255 , blue: 51/255 , alpha: 1),
-        "LosAngelesClippers": UIColor(red: 237/255 , green: 23/255 , blue: 76/255 , alpha: 1),
-        "LosAngelesLakers": UIColor(red: 253/255 , green: 185/255 , blue: 39/255 , alpha: 1),
-        "MemphisGrizzlies": UIColor(red: 15/255 , green: 88/255 , blue: 108/255 , alpha: 1),
-        "MiamiHeat": UIColor(red: 152/255 , green: 0/255 , blue: 46/255 , alpha: 1),
-        "MilwaukeeBucks": UIColor(red: 0/255 , green: 71/255 , blue: 27/255 , alpha: 1),
-        "MinnesotaTimberwolves": UIColor(red: 0/255 , green: 80/255 , blue: 131/255 , alpha: 1),
-        "NewOrleansPelicans": UIColor(red: 0/255 , green: 43/255 , blue: 92/255 , alpha: 1),
-        "NewYorkKnicks": UIColor(red: 245/255 , green: 132/255 , blue: 38/255 , alpha: 1),
-        "OklahomaCityThunder": UIColor(red: 0/255 , green: 125/255 , blue: 197/255 , alpha: 1),
-        "OrlandoMagic": UIColor(red: 0/255 , green: 125/255 , blue: 197/255 , alpha: 1),
-        "Philadelphia76ers": UIColor(red: 237/255 , green: 23/255 , blue: 76/255 , alpha: 1),
-        "PhoenixSuns": UIColor(red: 229/255 , green: 96/255 , blue: 32/255 , alpha: 1),
-        "PortlandTrailblazers": UIColor(red: 225/255 , green: 58/255 , blue: 62/255 , alpha: 1),
-        "SacramentoKings": UIColor(red: 114/255 , green: 76/255 , blue: 159/255 , alpha: 1),
-        "SanAntonioSpurs": UIColor(red: 186/255 , green: 195/255 , blue: 201/255 , alpha: 1),
-        "TorontoRaptors": UIColor(red: 206/255 , green: 17/255 , blue: 65/255 , alpha: 1),
-        "UtahJazz": UIColor(red: 0/255 , green: 43/255 , blue: 92/255 , alpha: 1),
-        "WashingtonWizards": UIColor(red: 0/255 , green: 43/255 , blue: 92/255 , alpha: 1)]
-    var secondaryColors:[String:UIColor] = ["AtlantaHawks": UIColor(red: 0, green: 43/255, blue: 92/255, alpha: 1),
-        "ChicagoBulls": UIColor(red: 6/255, green: 25/255, blue: 34/255, alpha: 1),
-        "DallasMavericks": UIColor(red: 196/255, green: 206/255, blue: 211/255, alpha: 1),
-        "DetriotPistons": UIColor(red: 237/255, green: 23/255, blue: 76/255, alpha: 1),
-        "GoldenStateWarriors": UIColor(red: 253/255, green: 185/255, blue: 39/255, alpha: 1),
-        "HoustonRockets": UIColor(red: 206/255, green: 17/255, blue: 65/255, alpha: 1),
-        "LosAngelesClippers": UIColor(red: 237/255, green: 23/255, blue: 76/255, alpha: 1),
-        "LosAngelesLakers": UIColor(red: 85/255, green: 37/255, blue: 130/255, alpha: 1),
-        "NewOrleansPelicans": UIColor(red: 227/255, green: 24/255, blue: 55/255, alpha: 1),
-        "OklahomaCityThunder": UIColor(red: 240/255, green: 81/255, blue: 51/255, alpha: 1),
-        "OrlandoMagic": UIColor(red: 196/255, green: 206/255 , blue: 211/255, alpha: 1),
-        "Philadelphia76ers": UIColor(red: 0, green: 107/255, blue: 182/255, alpha: 1),
-        "PortlandTrailblazers": UIColor(red: 186/255, green: 195/255, blue: 201/255, alpha: 1),
-        "TorontoRaptors": UIColor(red: 6/255, green: 25/255, blue: 34/255, alpha: 1),
-        "UtahJazz": UIColor(red: 249/255, green: 160/255, blue: 27/255, alpha: 1),
-        "WashingtonWizards": UIColor(red: 227/255, green: 24/255, blue: 55/255, alpha: 1)]
     
     @IBOutlet var navBar: UINavigationItem!
     
@@ -127,13 +81,14 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
         super.viewDidLoad()
         picHomeTeam.image = homeTeamImage
         picAwayTeam.image = awayTeamImage
-        navBar.title = homeTeamURL + "  vs  " + awayTeamURL
+        navBar.title = getTeamNameOnly(homeTeamURL) + "    vs    " + getTeamNameOnly(awayTeamURL)
         
         getHomeTeamData()
         getAwayTeamData()
         
         
         setUpGraph()
+        showChart()
         
     }
     
@@ -143,9 +98,9 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
         
         // Make these a method
         lblHomeTeamColor.backgroundColor = primaryColors[homeTeamURL]
-        lblHomeTeamColor.text = "  " + homeTeamURL + "  "
+        lblHomeTeamColor.text = "  " + getTeamNameOnly(homeTeamURL) + "  "
         lblAwayTeamColor.backgroundColor = primaryColors[awayTeamURL]
-        lblAwayTeamColor.text = "  " + awayTeamURL + "  "
+        lblAwayTeamColor.text = "  " + getTeamNameOnly(awayTeamURL) + "  "
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -159,30 +114,30 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
     
     func populateHomeTeam(newScore: String, newFGMade: String, newFGAttempted: String, new3PMade: String, new3PAttempted: String, newFTMade: String, newFTAttempted: String, newDReb: String, newOReb: String, newTotalReb: String, newSteals: String, newBlocks: String, newAssists: String, newTSP: String, newWinProb: String)->Void{
         
-        lblHomeScore.text = newScore
-        lblHomeFG.text = newFGMade + "/" + newFGAttempted
-        lblHome3pt.text = new3PMade + "/" + new3PAttempted
-        lblHomeFT.text = newFTMade + "/" + newFTAttempted
-        lblHomeRebounds.text = newOReb + "/" + newDReb + "/" + newTotalReb
-        lblHomeSteals.text = newSteals
-        lblHomeBlocks.text = newBlocks
-        lblHomeAssists.text = newAssists
-        lblHomeTSP.text = newTSP
-        lblHomeWinProb.text = newWinProb
+        lblHomeScore.text = newScore.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        lblHomeFG.text = newFGMade.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()) + "/" + newFGAttempted.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        lblHome3pt.text = new3PMade.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()) + "/" + new3PAttempted.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        lblHomeFT.text = newFTMade.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()) + "/" + newFTAttempted.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        lblHomeRebounds.text = newOReb.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()) + "/" + newDReb.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()) + "/" + newTotalReb.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        lblHomeSteals.text = newSteals.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        lblHomeBlocks.text = newBlocks.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        lblHomeAssists.text = newAssists.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        lblHomeTSP.text = newTSP.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        lblHomeWinProb.text = newWinProb.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         
     }
     
     func populateAwayTeam(newScore: String, newFGMade: String, newFGAttempted: String, new3PMade: String, new3PAttempted: String, newFTMade: String, newFTAttempted: String, newDReb: String, newOReb: String, newTotalReb: String, newSteals: String, newBlocks: String, newAssists: String, newTSP: String, newWinProb: String)->Void{
         
-        lblAwayScore.text = newScore
-        lblAwayFG.text = newFGMade + "/" + newFGAttempted
-        lblAway3pt.text = new3PMade + "/" + new3PAttempted
-        lblAwayFT.text = newFTMade + "/" + newFTAttempted
-        lblAwayRebounds.text = newOReb + "/" + newDReb + "/" + newTotalReb
-        lblAwaySteals.text = newSteals
-        lblAwayBlocks.text = newBlocks
-        lblAwayAssists.text = newAssists
-        lblAwayTSP.text = newTSP
+        lblAwayScore.text = newScore.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        lblAwayFG.text = newFGMade.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()) + "/" + newFGAttempted.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        lblAway3pt.text = new3PMade.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()) + "/" + new3PAttempted.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        lblAwayFT.text = newFTMade.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()) + "/" + newFTAttempted.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        lblAwayRebounds.text = newOReb.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()) + "/" + newDReb.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()) + "/" + newTotalReb.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        lblAwaySteals.text = newSteals.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        lblAwayBlocks.text = newBlocks.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        lblAwayAssists.text = newAssists.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        lblAwayTSP.text = newTSP.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         lblAwayWinProb.text = newWinProb
         
     }
@@ -281,8 +236,6 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
     func getColumnFromStringField(text: String) -> Int{
         if(text == "SCORE"){
             return 0
-            //GetMinValue
-            //GetMaxValue
         }
         if(text == "FIELD GOALS"){
             return 2
@@ -398,6 +351,16 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
             return UInt(homeTeamData.count)
         }
         return 0
+    }
+    func lineChartView(lineChartView: JBLineChartView!, lineStyleForLineAtLineIndex lineIndex: UInt) -> JBLineChartViewLineStyle{
+        if(lineIndex == 0){
+            return JBLineChartViewLineStyle.Solid
+        }
+        else if (lineIndex == 1){
+            return JBLineChartViewLineStyle.Solid
+        }
+        
+        return JBLineChartViewLineStyle.Solid
     }
     
     func getDataAtColmun(index: Int){
