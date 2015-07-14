@@ -283,7 +283,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/12/22" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyJ-bb-TLI">
-                                        <rect key="frame" x="16" y="224" width="72" height="20"/>
+                                        <rect key="frame" x="16" y="224" width="71.5" height="20"/>
                                         <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -313,7 +313,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5Q-SR-Vxa">
-                                        <rect key="frame" x="16" y="364" width="29" height="20"/>
+                                        <rect key="frame" x="16" y="364" width="28.5" height="20"/>
                                         <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -346,7 +346,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="751" text="10/12/22" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRo-Pu-eJf">
-                                        <rect key="frame" x="512" y="224" width="72" height="20"/>
+                                        <rect key="frame" x="512" y="224" width="71.5" height="20"/>
                                         <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -376,7 +376,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="256" verticalCompressionResistancePriority="754" text="45%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Z0-16-fvm">
-                                        <rect key="frame" x="555" y="364" width="29" height="20"/>
+                                        <rect key="frame" x="555" y="364" width="28.5" height="20"/>
                                         <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -399,9 +399,41 @@
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NeJ-jP-G5b" userLabel="Bar Chart View" customClass="JBLineChartView">
                                         <rect key="frame" x="16" y="429" width="568" height="250"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35K-q5-oyw">
+                                                <rect key="frame" x="8" y="8" width="42" height="21"/>
+                                                <color key="backgroundColor" red="0.0" green="0.32156862749999998" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P65-kI-DOe">
+                                                <rect key="frame" x="8" y="29" width="42" height="21"/>
+                                                <color key="backgroundColor" red="0.0" green="0.32156862749999998" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="35K-q5-oyw" firstAttribute="leading" secondItem="NeJ-jP-G5b" secondAttribute="leading" constant="8" id="4Zl-pe-f7f"/>
+                                            <constraint firstItem="35K-q5-oyw" firstAttribute="top" secondItem="NeJ-jP-G5b" secondAttribute="top" constant="8" id="aXi-ah-ikB"/>
                                             <constraint firstAttribute="height" constant="250" id="lEn-ZD-JZm"/>
+                                            <constraint firstItem="P65-kI-DOe" firstAttribute="top" secondItem="35K-q5-oyw" secondAttribute="bottom" constant="2" id="ojg-BM-sp6"/>
+                                            <constraint firstItem="P65-kI-DOe" firstAttribute="leading" secondItem="NeJ-jP-G5b" secondAttribute="leading" constant="8" id="uYn-Vf-STV"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -523,6 +555,7 @@
                         <outlet property="lblAwayScore" destination="6Ze-z9-ywu" id="kKc-Ui-jVG"/>
                         <outlet property="lblAwaySteals" destination="TGC-RJ-p8S" id="0WB-0n-IEu"/>
                         <outlet property="lblAwayTSP" destination="SFe-IT-VDO" id="4aX-bh-csE"/>
+                        <outlet property="lblAwayTeamColor" destination="P65-kI-DOe" id="gPS-Ee-miC"/>
                         <outlet property="lblAwayWinProb" destination="0Z0-16-fvm" id="Qpk-5Z-a6r"/>
                         <outlet property="lblGraph" destination="lho-ya-eWI" id="ySq-j7-Vgr"/>
                         <outlet property="lblHome3pt" destination="gIx-e7-2Kw" id="1lV-kK-uHn"/>
@@ -534,6 +567,7 @@
                         <outlet property="lblHomeScore" destination="1dO-Qd-4Ig" id="vXY-nf-wGI"/>
                         <outlet property="lblHomeSteals" destination="97I-Cu-5m2" id="jY5-G3-mYx"/>
                         <outlet property="lblHomeTSP" destination="2St-F4-l69" id="kDj-Td-eOp"/>
+                        <outlet property="lblHomeTeamColor" destination="35K-q5-oyw" id="n8z-9e-2Ni"/>
                         <outlet property="lblHomeWinProb" destination="t5Q-SR-Vxa" id="k2r-Hh-kSl"/>
                         <outlet property="lineChart" destination="NeJ-jP-G5b" id="kTa-PO-Qrh"/>
                         <outlet property="navBar" destination="VnM-dY-BCa" id="VAX-kc-Po2"/>

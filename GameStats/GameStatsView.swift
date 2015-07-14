@@ -13,43 +13,60 @@ import JBChart
 // To do:
 //dictionary of secondary colors
 //max/ min from data max/min
+// dynamically set graph bounds from max/min
 
 
 class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartViewDelegate{
     
     var primaryColors:[String:UIColor] = ["AtlantaHawks": UIColor(red: 225/255 , green: 58/255 , blue: 62/255 , alpha: 1),
-                                            "BostonCeltics": UIColor(red: 0/255 , green: 131/255 , blue: 72/255 , alpha: 1),
-                                            "BrooklynNets": UIColor(red: 6/255 , green: 25/255 , blue: 34/255 , alpha: 1),
-                                            "CharlotteHornets": UIColor(red: 29/255 , green: 17/255 , blue: 96/255 , alpha: 1),
-                                            "ChicagoBulls": UIColor(red: 206/255 , green: 17/255 , blue: 65/255 , alpha: 1),
-                                            "ClevelandCavaliers": UIColor(red: 134/255 , green: 0/255 , blue: 56/255 , alpha: 1),
-                                            "DallasMavericks": UIColor(red: 0/255 , green: 125/255 , blue: 197/255 , alpha: 1),
-                                            "DenverNuggets": UIColor(red: 77/255 , green: 144/255 , blue: 205/255 , alpha: 1),
-                                            "DetroitPistons": UIColor(red: 237/255 , green: 23/255 , blue: 76/255 , alpha: 1),
-                                            "GoldenStateWarriors": UIColor(red: 253/255 , green: 185/255 , blue: 39/255 , alpha: 1),
-                                            "HoustonRockets": UIColor(red: 206/255 , green: 17/255 , blue: 65/255 , alpha: 1),
-                                            "IndianaPacers": UIColor(red: 255/255 , green: 198/255 , blue: 51/255 , alpha: 1),
-                                            "LosAngelesClippers": UIColor(red: 237/255 , green: 23/255 , blue: 76/255 , alpha: 1),
-                                            "LosAngelesLakers": UIColor(red: 253/255 , green: 185/255 , blue: 39/255 , alpha: 1),
-                                            "MemphisGrizzlies": UIColor(red: 15/255 , green: 88/255 , blue: 108/255 , alpha: 1),
-                                            "MiamiHeat": UIColor(red: 152/255 , green: 0/255 , blue: 46/255 , alpha: 1),
-                                            "MilwaukeeBucks": UIColor(red: 0/255 , green: 71/255 , blue: 27/255 , alpha: 1),
-                                            "MinnesotaTimberwolves": UIColor(red: 0/255 , green: 80/255 , blue: 131/255 , alpha: 1),
-                                            "NewOrleansPelicans": UIColor(red: 0/255 , green: 43/255 , blue: 92/255 , alpha: 1),
-                                            "NewYorkKnicks": UIColor(red: 245/255 , green: 132/255 , blue: 38/255 , alpha: 1),
-                                            "OklahomaCityThunder": UIColor(red: 0/255 , green: 125/255 , blue: 195/255 , alpha: 1),
-                                            "OrlandoMagic": UIColor(red: 0/255 , green: 125/255 , blue: 197/255 , alpha: 1),
-                                            "Philadelphia76ers": UIColor(red: 237/255 , green: 23/255 , blue: 76/255 , alpha: 1),
-                                            "PhoenixSuns": UIColor(red: 229/255 , green: 96/255 , blue: 32/255 , alpha: 1),
-                                            "PortlandTrailblazers": UIColor(red: 224/255 , green: 58/255 , blue: 62/255 , alpha: 1),
-                                            "SacramentoKings": UIColor(red: 114/255 , green: 76/255 , blue: 159/255 , alpha: 1),
-                                            "SanAntonioSpurs": UIColor(red: 186/255 , green: 195/255 , blue: 201/255 , alpha: 1),
-                                            "TorontoRaptors": UIColor(red: 206/255 , green: 17/255 , blue: 65/255 , alpha: 1),
-                                            "UtahJazz": UIColor(red: 0/255 , green: 43/255 , blue: 92/255 , alpha: 1),
-                                            "WashingtonWizards": UIColor(red: 0/255 , green: 43/255 , blue: 92/255 , alpha: 1)]
-
+        "BostonCeltics": UIColor(red: 0/255 , green: 131/255 , blue: 72/255 , alpha: 1),
+        "BrooklynNets": UIColor(red: 6/255 , green: 25/255 , blue: 34/255 , alpha: 1),
+        "CharlotteHornets": UIColor(red: 29/255 , green: 17/255 , blue: 96/255 , alpha: 1),
+        "ChicagoBulls": UIColor(red: 206/255 , green: 17/255 , blue: 65/255 , alpha: 1),
+        "ClevelandCavaliers": UIColor(red: 134/255 , green: 0/255 , blue: 56/255 , alpha: 1),
+        "DallasMavericks": UIColor(red: 0/255 , green: 125/255 , blue: 197/255 , alpha: 1),
+        "DenverNuggets": UIColor(red: 77/255 , green: 144/255 , blue: 205/255 , alpha: 1),
+        "DetroitPistons": UIColor(red: 237/255 , green: 23/255 , blue: 76/255 , alpha: 1),
+        "GoldenStateWarriors": UIColor(red: 253/255 , green: 185/255 , blue: 39/255 , alpha: 1),
+        "HoustonRockets": UIColor(red: 206/255 , green: 17/255 , blue: 65/255 , alpha: 1),
+        "IndianaPacers": UIColor(red: 255/255 , green: 198/255 , blue: 51/255 , alpha: 1),
+        "LosAngelesClippers": UIColor(red: 237/255 , green: 23/255 , blue: 76/255 , alpha: 1),
+        "LosAngelesLakers": UIColor(red: 253/255 , green: 185/255 , blue: 39/255 , alpha: 1),
+        "MemphisGrizzlies": UIColor(red: 15/255 , green: 88/255 , blue: 108/255 , alpha: 1),
+        "MiamiHeat": UIColor(red: 152/255 , green: 0/255 , blue: 46/255 , alpha: 1),
+        "MilwaukeeBucks": UIColor(red: 0/255 , green: 71/255 , blue: 27/255 , alpha: 1),
+        "MinnesotaTimberwolves": UIColor(red: 0/255 , green: 80/255 , blue: 131/255 , alpha: 1),
+        "NewOrleansPelicans": UIColor(red: 0/255 , green: 43/255 , blue: 92/255 , alpha: 1),
+        "NewYorkKnicks": UIColor(red: 245/255 , green: 132/255 , blue: 38/255 , alpha: 1),
+        "OklahomaCityThunder": UIColor(red: 0/255 , green: 125/255 , blue: 197/255 , alpha: 1),
+        "OrlandoMagic": UIColor(red: 0/255 , green: 125/255 , blue: 197/255 , alpha: 1),
+        "Philadelphia76ers": UIColor(red: 237/255 , green: 23/255 , blue: 76/255 , alpha: 1),
+        "PhoenixSuns": UIColor(red: 229/255 , green: 96/255 , blue: 32/255 , alpha: 1),
+        "PortlandTrailblazers": UIColor(red: 225/255 , green: 58/255 , blue: 62/255 , alpha: 1),
+        "SacramentoKings": UIColor(red: 114/255 , green: 76/255 , blue: 159/255 , alpha: 1),
+        "SanAntonioSpurs": UIColor(red: 186/255 , green: 195/255 , blue: 201/255 , alpha: 1),
+        "TorontoRaptors": UIColor(red: 206/255 , green: 17/255 , blue: 65/255 , alpha: 1),
+        "UtahJazz": UIColor(red: 0/255 , green: 43/255 , blue: 92/255 , alpha: 1),
+        "WashingtonWizards": UIColor(red: 0/255 , green: 43/255 , blue: 92/255 , alpha: 1)]
+    var secondaryColors:[String:UIColor] = ["AtlantaHawks": UIColor(red: 0, green: 43/255, blue: 92/255, alpha: 1),
+        "ChicagoBulls": UIColor(red: 6/255, green: 25/255, blue: 34/255, alpha: 1),
+        "DallasMavericks": UIColor(red: 196/255, green: 206/255, blue: 211/255, alpha: 1),
+        "DetriotPistons": UIColor(red: 237/255, green: 23/255, blue: 76/255, alpha: 1),
+        "GoldenStateWarriors": UIColor(red: 253/255, green: 185/255, blue: 39/255, alpha: 1),
+        "HoustonRockets": UIColor(red: 206/255, green: 17/255, blue: 65/255, alpha: 1),
+        "LosAngelesClippers": UIColor(red: 237/255, green: 23/255, blue: 76/255, alpha: 1),
+        "LosAngelesLakers": UIColor(red: 85/255, green: 37/255, blue: 130/255, alpha: 1),
+        "NewOrleansPelicans": UIColor(red: 227/255, green: 24/255, blue: 55/255, alpha: 1),
+        "OklahomaCityThunder": UIColor(red: 240/255, green: 81/255, blue: 51/255, alpha: 1),
+        "OrlandoMagic": UIColor(red: 196/255, green: 206/255 , blue: 211/255, alpha: 1),
+        "Philadelphia76ers": UIColor(red: 0, green: 107/255, blue: 182/255, alpha: 1),
+        "PortlandTrailblazers": UIColor(red: 186/255, green: 195/255, blue: 201/255, alpha: 1),
+        "TorontoRaptors": UIColor(red: 6/255, green: 25/255, blue: 34/255, alpha: 1),
+        "UtahJazz": UIColor(red: 249/255, green: 160/255, blue: 27/255, alpha: 1),
+        "WashingtonWizards": UIColor(red: 227/255, green: 24/255, blue: 55/255, alpha: 1)]
+    
     @IBOutlet var navBar: UINavigationItem!
-
+    
     @IBOutlet weak var picHomeTeam: UIImageView!
     @IBOutlet weak var picAwayTeam: UIImageView!
     @IBOutlet var lblGraph: UILabel!
@@ -66,6 +83,10 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
     var killThread: Bool = false
     
     var statsLine: String!
+    
+    @IBOutlet var lblHomeTeamColor: UILabel!
+    @IBOutlet var lblAwayTeamColor: UILabel!
+    
     
     @IBOutlet var lineChart: JBLineChartView!
     
@@ -110,15 +131,21 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
         
         getHomeTeamData()
         getAwayTeamData()
-    
+        
         
         setUpGraph()
-
+        
     }
     
     override func viewWillAppear(animated: Bool) {
         refreshData()
         killThread = false
+        
+        // Make these a method
+        lblHomeTeamColor.backgroundColor = primaryColors[homeTeamURL]
+        lblHomeTeamColor.text = "  " + homeTeamURL + "  "
+        lblAwayTeamColor.backgroundColor = primaryColors[awayTeamURL]
+        lblAwayTeamColor.text = "  " + awayTeamURL + "  "
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -180,9 +207,9 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
         
         let lines = dataString.componentsSeparatedByString("\n")
         
-
+        
         let mostRecentData = lines[(lines.count-3)].componentsSeparatedByString(",")
-
+        
         var TSP :Float = mostRecentData[36].floatValue
         var foulShots : Float = mostRecentData[9].floatValue * 0.44
         TSP = mostRecentData[0].floatValue / (2 * (mostRecentData[3].floatValue+(0.44 * mostRecentData[9].floatValue)))
@@ -246,14 +273,51 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
                 dispatch_async(dispatch_get_main_queue()){
                     self.getAwayTeamData()
                     self.getHomeTeamData()
-                    self.getDataAtColmun(0)
+                    self.getDataAtColmun(self.getColumnFromStringField(self.lblGraph.text!))
                 }
             }
         }
     }
-    
+    func getColumnFromStringField(text: String) -> Int{
+        if(text == "SCORE"){
+            return 0
+            //GetMinValue
+            //GetMaxValue
+        }
+        if(text == "FIELD GOALS"){
+            return 2
+        }
+        if(text == "3-PT FIELD GOALS"){
+            return 5
+        }
+        if(text == "FREE THROWS"){
+            return 8
+        }
+        if(text == "REBOUNDS O/D/T"){
+            return 13
+        }
+        if(text == "STEALS"){
+            return 15
+        }
+        if(text == "BLOCKS"){
+            return 16
+        }
+        if(text == "ASSISTS"){
+            return 14
+        }
+        //TO DO: TRUE SHOOTING PERCENTAGE
+        
+        
+        
+        
+        return 0
+    }
     @IBAction func buttonTapped(sender: UIButton){
         lblGraph.text = sender.titleLabel?.text
+        var index = getColumnFromStringField(sender.titleLabel!.text!)
+        getDataAtColmun(index)
+        showChart()
+        
     }
     
     func setUpGraph(){
@@ -264,8 +328,7 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
         lineChart.maximumValue = 100
         lineChart.reloadData()
         
-        getDataAtColmun(0)
-        showChart()
+        
         
     }
     
@@ -298,7 +361,7 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
     func lineChartView(lineChartView: JBLineChartView!, colorForLineAtLineIndex lineIndex: UInt) -> UIColor! {
         if(lineIndex == 0){
             return primaryColors[awayTeamURL]
-
+            
         }
         else if (lineIndex == 1){
             return primaryColors[homeTeamURL]
@@ -314,7 +377,7 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
     func lineChartView(lineChartView: JBLineChartView!, colorForDotAtHorizontalIndex horizontalIndex: UInt, atLineIndex lineIndex: UInt) -> UIColor! {
         return UIColor.lightGrayColor()
     }
-
+    
     func lineChartView(lineChartView: JBLineChartView!, smoothLineAtLineIndex lineIndex: UInt) -> Bool {
         return false
     }
@@ -345,7 +408,10 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
         
         for line in lines{
             let currentData = line.componentsSeparatedByString(",")
-            awayTeamData.append(currentData[index].floatValue)
+            if (currentData.count >= 36){
+                awayTeamData.append(currentData[index].floatValue)
+            }
+            
         }
         if(awayTeamData.count > 1){
             awayTeamData.removeLast()
@@ -362,15 +428,19 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
         
         for line in lines{
             let currentData = line.componentsSeparatedByString(",")
-            homeTeamData.append(currentData[index].floatValue)
+            if(currentData.count >= 36){
+                homeTeamData.append(currentData[index].floatValue)
+            }
         }
         if(homeTeamData.count > 1){
             homeTeamData.removeLast()
         }
         
+        
+        lineChart.maximumValue = CGFloat(maxElement([maxElement(homeTeamData), maxElement(awayTeamData)])+5)
         lineChart.reloadData()
         
     }
-
+    
 }
 
