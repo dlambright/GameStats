@@ -16,4 +16,8 @@ class CustomCell: UITableViewCell {
     var homeTeam : String!
     var awayTeam : String!
 
+    @IBOutlet var awayTeamBackground: RightSideTriangle!
+    @IBOutlet var homeTeamBackground: TriangleView!
+
+    
 }

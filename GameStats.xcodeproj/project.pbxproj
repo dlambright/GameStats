@@ -14,6 +14,8 @@
 		A821CD461B0AF4970053556E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A821CD441B0AF4970053556E /* LaunchScreen.xib */; };
 		A821CD521B0AF4970053556E /* GameStatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A821CD511B0AF4970053556E /* GameStatsTests.swift */; };
 		A8246F121B35F000005D5219 /* NNBA_1000.png in Resources */ = {isa = PBXBuildFile; fileRef = A8246F111B35F000005D5219 /* NNBA_1000.png */; };
+		A87176E21B5D933A00FE1D63 /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87176E11B5D933A00FE1D63 /* TriangleView.swift */; };
+		A87176E41B5D97F100FE1D63 /* RightSideTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87176E31B5D97F100FE1D63 /* RightSideTriangle.swift */; };
 		A873AFED1B51C240005C6BE7 /* JBChart.h in Headers */ = {isa = PBXBuildFile; fileRef = A873AFEC1B51C240005C6BE7 /* JBChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A873AFF31B51C240005C6BE7 /* JBChart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A873AFE81B51C240005C6BE7 /* JBChart.framework */; };
 		A873AFFC1B51C240005C6BE7 /* JBChartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A873AFFB1B51C240005C6BE7 /* JBChartTests.m */; };
@@ -118,6 +120,8 @@
 		A821CD501B0AF4970053556E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A821CD511B0AF4970053556E /* GameStatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatsTests.swift; sourceTree = "<group>"; };
 		A8246F111B35F000005D5219 /* NNBA_1000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NNBA_1000.png; path = GameStats/Images.xcassets/NNBA/NNBA_1000.png; sourceTree = "<group>"; };
+		A87176E11B5D933A00FE1D63 /* TriangleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
+		A87176E31B5D97F100FE1D63 /* RightSideTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightSideTriangle.swift; sourceTree = "<group>"; };
 		A873AFE81B51C240005C6BE7 /* JBChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JBChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A873AFEB1B51C240005C6BE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A873AFEC1B51C240005C6BE7 /* JBChart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBChart.h; sourceTree = "<group>"; };
@@ -239,6 +243,8 @@
 		A821CD391B0AF4970053556E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A87176E31B5D97F100FE1D63 /* RightSideTriangle.swift */,
+				A87176E11B5D933A00FE1D63 /* TriangleView.swift */,
 				A821CD421B0AF4970053556E /* Images.xcassets */,
 				A821CD441B0AF4970053556E /* LaunchScreen.xib */,
 				A821CD3B1B0AF4970053556E /* AppDelegate.swift */,
@@ -562,7 +568,9 @@
 				A821CD3E1B0AF4970053556E /* ViewController.swift in Sources */,
 				A8D705F71B137B5800F4E471 /* GameStatsView.swift in Sources */,
 				A8DC4F8C1B183FA100041484 /* CustomCell.swift in Sources */,
+				A87176E41B5D97F100FE1D63 /* RightSideTriangle.swift in Sources */,
 				A821CD3C1B0AF4970053556E /* AppDelegate.swift in Sources */,
+				A87176E21B5D933A00FE1D63 /* TriangleView.swift in Sources */,
 				A877B0271B555BAD0065CD9B /* GameStatsConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

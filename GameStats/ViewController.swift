@@ -11,6 +11,10 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    //var piOrLocal: String = "192.168.1.81/"
+    var piOrLocal: String = "127.0.0.1/"
+    
+    
     @IBOutlet weak var tblGames: UITableView!
     
     //var teamList : [String] = ["Nets", "Raptors", "Celtics", "Knicks", "76ers", "Hawks", "Heat", "Magic", "Hornets", "Wizards", "Bucks", "Cavaliers", "Pistons", "Bulls", "Pacers", "Kings", "Warriors", "Lakers", "Suns", "Clippers", "Jazz", "Thunder", "TrailBlazers", "Timberwolves", "Nuggets", "Spurs", "Rockets", "Grizzlies", "Pelicans", "Mavericks"]
@@ -42,6 +46,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.picAwayTeam.image = UIImage(named: awayIndex)
         cell.homeTeam = teamList[2 * indexPath.row]
         cell.awayTeam = teamList[2 * indexPath.row + 1]
+        cell.homeTeamBackground.backgroundColor = primaryColors[teamList[2 * indexPath.row]]
+        cell.awayTeamBackground.backgroundColor = primaryColors[teamList[2 * indexPath.row + 1]]
+        
+        
+        
+        
+        
         return cell
     }
     
@@ -68,7 +79,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func getTodaysGames(){
-        let dataString : NSString! = readHTML("127.0.0.1/todaysGames")
+        let dataString : NSString! = readHTML(piOrLocal + "todaysGames")
         teamList = dataString.componentsSeparatedByString(" ") as! [String]
     }
 
