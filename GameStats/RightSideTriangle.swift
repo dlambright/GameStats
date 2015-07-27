@@ -20,7 +20,7 @@ class RightSideTriangle: UIView {
         var path = CGPathCreateMutable()
         
         CGPathMoveToPoint(path, nil, 0, height)
-        CGPathAddLineToPoint(path, nil, (width - 78), 0)
+        CGPathAddLineToPoint(path, nil, (width - 88), 0)
         CGPathAddLineToPoint(path, nil, width, 0)
         CGPathAddLineToPoint(path, nil, width, height)
         CGPathAddLineToPoint(path, nil, 0, height)

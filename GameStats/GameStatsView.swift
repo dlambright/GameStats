@@ -153,11 +153,11 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
         
         if (error != nil) {
             println("whoops, something went wrong")
+            return ""
         } else {
             //println(html!)
             return html!
         }
-        return html!
     }
     
     func gethomeTeamData()->Void{
@@ -280,6 +280,8 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
     @IBAction func buttonTapped(sender: UIButton){
         lblGraph.text = sender.titleLabel?.text
         var index = getColumnFromStringField(sender.titleLabel!.text!)
+        lblHomeTeamColor.text = "  " + getTeamNameOnly(homeTeamURL) + "  "
+        lblAwayTeamColor.text = "  " + getTeamNameOnly(awayTeamURL) + "  "
         getDataAtColmun(index)
         showChart()
         
@@ -348,11 +350,11 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
     }
     
     func lineChartView(lineChartView: JBLineChartView!, didSelectLineAtIndex lineIndex: UInt, horizontalIndex: UInt) {
-        if (lineIndex == 0){
-            let homeData = homeTeamDataAsFloat[Int(horizontalIndex)]
-            let awayData = awayTeamDataAsFloat[Int(horizontalIndex)]
-            //let key = chartLegend[Int(horizontalIndex)]
-        }
+        let homeData = homeTeamDataAsFloat[Int(horizontalIndex)]
+        let awayData = awayTeamDataAsFloat[Int(horizontalIndex)]
+    
+        lblHomeTeamColor.text = "  " + getTeamNameOnly(homeTeamURL) + " = " + homeData.description + "  "
+        lblAwayTeamColor.text = "  " + getTeamNameOnly(awayTeamURL) + " = " + awayData.description + "  "
     }
     
     func lineChartView(lineChartView: JBLineChartView!, numberOfVerticalValuesAtLineIndex lineIndex: UInt) -> UInt {

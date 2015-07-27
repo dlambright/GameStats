@@ -20,10 +20,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //var teamList : [String] = ["Nets", "Raptors", "Celtics", "Knicks", "76ers", "Hawks", "Heat", "Magic", "Hornets", "Wizards", "Bucks", "Cavaliers", "Pistons", "Bulls", "Pacers", "Kings", "Warriors", "Lakers", "Suns", "Clippers", "Jazz", "Thunder", "TrailBlazers", "Timberwolves", "Nuggets", "Spurs", "Rockets", "Grizzlies", "Pelicans", "Mavericks"]
     var teamList: [String] = []
     override func viewDidLoad() {
-        getTodaysGames()
         super.viewDidLoad()
 
         self.tblGames.dataSource = self
+
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        getTodaysGames()
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.tblGames.reloadData()
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,15 +47,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath)->UITableViewCell{
         let cell : CustomCell = self.tblGames.dequeueReusableCellWithIdentifier("cell") as! CustomCell
         
-        var homeIndex = teamList[2 * indexPath.row] + ".jpg"
-        var awayIndex = teamList[(2 * indexPath.row) + 1] + ".jpg"
-        cell.picHomeTeam.image = UIImage(named: homeIndex)
-        cell.picAwayTeam.image = UIImage(named: awayIndex)
-        cell.homeTeam = teamList[2 * indexPath.row]
-        cell.awayTeam = teamList[2 * indexPath.row + 1]
-        cell.homeTeamBackground.backgroundColor = primaryColors[teamList[2 * indexPath.row]]
-        cell.awayTeamBackground.backgroundColor = primaryColors[teamList[2 * indexPath.row + 1]]
+        var homeTeamData = teamList[2 * indexPath.row].componentsSeparatedByString(" ") //as? [String]
+        var awayTeamData = teamList[2 * indexPath.row + 1].componentsSeparatedByString(" ") //as? [String]
         
+        var homeTeamName = homeTeamData[0]
+        let awayTeamName = awayTeamData[0]
+        let homeTeamScore = homeTeamData[1]
+        let awayTeamScore = awayTeamData[1]
+        
+        cell.picHomeTeam.image = UIImage(named: homeTeamName + ".jpg")
+        cell.picAwayTeam.image = UIImage(named: awayTeamName + ".jpg")
+        cell.homeTeam = homeTeamName
+        cell.awayTeam = awayTeamName
+        cell.homeTeamBackground.backgroundColor = primaryColors[homeTeamName]
+        cell.awayTeamBackground.backgroundColor = primaryColors[awayTeamName]
+        cell.homeTeamScore.text = homeTeamScore
+        cell.awayTeamScore.text = awayTeamScore
         
         
         
@@ -80,7 +94,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func getTodaysGames(){
         let dataString : NSString! = readHTML(piOrLocal + "todaysGames")
-        teamList = dataString.componentsSeparatedByString(" ") as! [String]
+        teamList = dataString.componentsSeparatedByString(";") as! [String]
     }
 
     func readHTML(givenURL: String)->NSString{
@@ -90,11 +104,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         if (error != nil) {
             println("whoops, something went wrong")
+            return ""
         } else {
-            //println(html!)
             return html!
         }
-        return html!
     }
 }
 

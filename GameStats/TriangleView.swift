@@ -21,7 +21,7 @@ class TriangleView: UIView {
         
         CGPathMoveToPoint(path, nil, 0, 0)
         CGPathAddLineToPoint(path, nil, width, 0)
-        CGPathAddLineToPoint(path, nil, width - (width - 78), height)
+        CGPathAddLineToPoint(path, nil, width - (width - 88), height)
         CGPathAddLineToPoint(path, nil, 0, height)
         CGPathAddLineToPoint(path, nil, 0, 0)
         

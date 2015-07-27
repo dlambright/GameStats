@@ -47,6 +47,11 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="47t-4F-opl"/>
+                                            </mask>
+                                        </variation>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmj-2t-eg8">
                                         <rect key="frame" x="8" y="146" width="584" height="20"/>
@@ -286,7 +291,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/12/22" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyJ-bb-TLI">
-                                        <rect key="frame" x="16" y="258" width="72" height="20"/>
+                                        <rect key="frame" x="16" y="258" width="71.5" height="20"/>
                                         <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -346,7 +351,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="751" text="10/12/22" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRo-Pu-eJf">
-                                        <rect key="frame" x="512" y="258" width="72" height="20"/>
+                                        <rect key="frame" x="512.5" y="258" width="71.5" height="20"/>
                                         <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -404,7 +409,7 @@
                                         <rect key="frame" x="8" y="423" width="584" height="250"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35K-q5-oyw">
-                                                <rect key="frame" x="16" y="8" width="31" height="15"/>
+                                                <rect key="frame" x="16" y="8" width="30.5" height="14.5"/>
                                                 <color key="backgroundColor" red="0.0" green="0.32156862749999998" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -417,7 +422,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P65-kI-DOe">
-                                                <rect key="frame" x="16" y="24" width="31" height="15"/>
+                                                <rect key="frame" x="16" y="24.5" width="30.5" height="14.5"/>
                                                 <color key="backgroundColor" red="0.0" green="0.32156862749999998" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -609,7 +614,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="151" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eJT-Rm-IOd">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelectionDuringEditing="YES" rowHeight="151" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eJT-Rm-IOd">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -628,11 +633,11 @@
                                                     <color key="backgroundColor" red="1" green="0.69230571549999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ib7-Al-XDz">
-                                                    <rect key="frame" x="8" y="15" width="446" height="25"/>
+                                                    <rect key="frame" x="8" y="15" width="448" height="25"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAr-ap-ShR">
-                                                            <rect key="frame" x="120" y="2" width="326" height="20"/>
-                                                            <fontDescription key="fontDescription" name="Trebuchet-BoldItalic" family="Trebuchet MS" pointSize="17"/>
+                                                            <rect key="frame" x="120" y="2" width="328" height="22.5"/>
+                                                            <fontDescription key="fontDescription" name="Trebuchet-BoldItalic" family="Trebuchet MS" pointSize="19"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -640,6 +645,7 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="HAr-ap-ShR" firstAttribute="top" secondItem="ib7-Al-XDz" secondAttribute="top" constant="2" id="EtJ-9B-Fyw"/>
+                                                        <constraint firstAttribute="trailing" secondItem="HAr-ap-ShR" secondAttribute="trailing" id="GnM-7c-OG1"/>
                                                         <constraint firstAttribute="height" constant="25" id="hvV-RV-krO"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
@@ -661,11 +667,11 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipi-Ei-AEh">
-                                                    <rect key="frame" x="146" y="110" width="446" height="25"/>
+                                                    <rect key="frame" x="144" y="110" width="448" height="25"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXw-Q0-cId">
-                                                            <rect key="frame" x="0.0" y="2" width="326" height="20"/>
-                                                            <fontDescription key="fontDescription" name="Trebuchet-BoldItalic" family="Trebuchet MS" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="2" width="328" height="22.5"/>
+                                                            <fontDescription key="fontDescription" name="Trebuchet-BoldItalic" family="Trebuchet MS" pointSize="19"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -704,7 +710,6 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="y1h-hv-lzN" secondAttribute="trailing" constant="-16" id="9K6-kf-RgE"/>
                                                 <constraint firstItem="y1h-hv-lzN" firstAttribute="top" secondItem="T7Y-J0-tMw" secondAttribute="topMargin" constant="-4" id="Gad-P1-yK3"/>
                                                 <constraint firstItem="uP5-aa-Rfp" firstAttribute="top" secondItem="T7Y-J0-tMw" secondAttribute="topMargin" constant="7" id="Hp1-cl-HLD"/>
-                                                <constraint firstItem="bVV-q4-KJ0" firstAttribute="leading" secondItem="HAr-ap-ShR" secondAttribute="trailing" constant="18" id="Ji5-XU-roe"/>
                                                 <constraint firstItem="ipi-Ei-AEh" firstAttribute="trailing" secondItem="T7Y-J0-tMw" secondAttribute="trailingMargin" id="Krb-OG-fHw"/>
                                                 <constraint firstItem="ib7-Al-XDz" firstAttribute="leading" secondItem="T7Y-J0-tMw" secondAttribute="leadingMargin" id="KwI-dM-ftO"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="y1h-hv-lzN" secondAttribute="bottom" constant="-4" id="Ro5-VM-30U"/>
@@ -724,9 +729,9 @@
                                                 <constraint firstItem="uP5-aa-Rfp" firstAttribute="centerY" secondItem="T7Y-J0-tMw" secondAttribute="centerY" id="ryf-0L-At9"/>
                                                 <constraint firstItem="y1h-hv-lzN" firstAttribute="leading" secondItem="X8O-Fg-f4G" secondAttribute="trailing" id="tLR-gY-dNN"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="ipi-Ei-AEh" secondAttribute="bottom" constant="7" id="uMH-Ms-sqb"/>
-                                                <constraint firstItem="ipi-Ei-AEh" firstAttribute="leading" secondItem="uP5-aa-Rfp" secondAttribute="trailing" constant="18" id="uvK-Ms-nWA"/>
+                                                <constraint firstItem="ipi-Ei-AEh" firstAttribute="leading" secondItem="uP5-aa-Rfp" secondAttribute="trailing" constant="16" id="uvK-Ms-nWA"/>
                                                 <constraint firstItem="bVV-q4-KJ0" firstAttribute="leading" secondItem="vXw-Q0-cId" secondAttribute="trailing" id="vjl-qC-zW9"/>
-                                                <constraint firstItem="bVV-q4-KJ0" firstAttribute="leading" secondItem="ib7-Al-XDz" secondAttribute="trailing" constant="18" id="yX9-5K-V2q"/>
+                                                <constraint firstItem="bVV-q4-KJ0" firstAttribute="leading" secondItem="ib7-Al-XDz" secondAttribute="trailing" constant="16" id="yX9-5K-V2q"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -742,7 +747,9 @@
                                         <color key="backgroundColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="awayTeamBackground" destination="y1h-hv-lzN" id="lnS-7X-WnK"/>
+                                            <outlet property="awayTeamScore" destination="vXw-Q0-cId" id="RgS-zT-UfY"/>
                                             <outlet property="homeTeamBackground" destination="X8O-Fg-f4G" id="cly-7c-AvX"/>
+                                            <outlet property="homeTeamScore" destination="HAr-ap-ShR" id="1gT-w9-med"/>
                                             <outlet property="picAwayTeam" destination="bVV-q4-KJ0" id="Pa1-pB-2MQ"/>
                                             <outlet property="picHomeTeam" destination="uP5-aa-Rfp" id="cS6-XA-Bax"/>
                                             <segue destination="V4B-pV-N8A" kind="show" identifier="TableToDetailSegue" id="i8v-Rx-OJX"/>
