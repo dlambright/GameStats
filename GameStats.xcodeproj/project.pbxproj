@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		A821CD3C1B0AF4970053556E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A821CD3B1B0AF4970053556E /* AppDelegate.swift */; };
-		A821CD3E1B0AF4970053556E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A821CD3D1B0AF4970053556E /* ViewController.swift */; };
+		A821CD3E1B0AF4970053556E /* TodaysGamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A821CD3D1B0AF4970053556E /* TodaysGamesView.swift */; };
 		A821CD411B0AF4970053556E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A821CD3F1B0AF4970053556E /* Main.storyboard */; };
 		A821CD431B0AF4970053556E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A821CD421B0AF4970053556E /* Images.xcassets */; };
 		A821CD461B0AF4970053556E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A821CD441B0AF4970053556E /* LaunchScreen.xib */; };
 		A821CD521B0AF4970053556E /* GameStatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A821CD511B0AF4970053556E /* GameStatsTests.swift */; };
 		A8246F121B35F000005D5219 /* NNBA_1000.png in Resources */ = {isa = PBXBuildFile; fileRef = A8246F111B35F000005D5219 /* NNBA_1000.png */; };
+		A840DDCF1BA938C30042BF93 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = A840DDCE1BA938C30042BF93 /* Game.swift */; };
 		A87176E21B5D933A00FE1D63 /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87176E11B5D933A00FE1D63 /* TriangleView.swift */; };
 		A87176E41B5D97F100FE1D63 /* RightSideTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87176E31B5D97F100FE1D63 /* RightSideTriangle.swift */; };
 		A873AFED1B51C240005C6BE7 /* JBChart.h in Headers */ = {isa = PBXBuildFile; fileRef = A873AFEC1B51C240005C6BE7 /* JBChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -59,8 +60,9 @@
 		A89BB7B81B4CD9B9009D95CA /* UtahJazz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A89BB79A1B4CD9B9009D95CA /* UtahJazz.jpg */; };
 		A89BB7B91B4CD9B9009D95CA /* WashingtonWizards.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A89BB79B1B4CD9B9009D95CA /* WashingtonWizards.jpg */; };
 		A89C909C1B3524230074E1EB /* NNBA_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A89C909B1B3524230074E1EB /* NNBA_Logo.png */; };
-		A8D705F71B137B5800F4E471 /* GameStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D705F61B137B5800F4E471 /* GameStatsView.swift */; };
+		A8D705F71B137B5800F4E471 /* CurrentGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D705F61B137B5800F4E471 /* CurrentGameView.swift */; };
 		A8DC4F8C1B183FA100041484 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC4F8B1B183FA100041484 /* CustomCell.swift */; };
+		A8DCE4FA1BAE283B0097E153 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DCE4F91BAE283B0097E153 /* SwiftyJSON.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,7 +114,7 @@
 		A821CD361B0AF4970053556E /* GameStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A821CD3A1B0AF4970053556E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A821CD3B1B0AF4970053556E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A821CD3D1B0AF4970053556E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A821CD3D1B0AF4970053556E /* TodaysGamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysGamesView.swift; sourceTree = "<group>"; };
 		A821CD401B0AF4970053556E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A821CD421B0AF4970053556E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A821CD451B0AF4970053556E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 		A821CD501B0AF4970053556E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A821CD511B0AF4970053556E /* GameStatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatsTests.swift; sourceTree = "<group>"; };
 		A8246F111B35F000005D5219 /* NNBA_1000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NNBA_1000.png; path = GameStats/Images.xcassets/NNBA/NNBA_1000.png; sourceTree = "<group>"; };
+		A840DDCE1BA938C30042BF93 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		A87176E11B5D933A00FE1D63 /* TriangleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
 		A87176E31B5D97F100FE1D63 /* RightSideTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightSideTriangle.swift; sourceTree = "<group>"; };
 		A873AFE81B51C240005C6BE7 /* JBChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JBChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,8 +169,9 @@
 		A89BB79A1B4CD9B9009D95CA /* UtahJazz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = UtahJazz.jpg; path = GameStats/Images.xcassets/Teams/UtahJazz.jpg; sourceTree = "<group>"; };
 		A89BB79B1B4CD9B9009D95CA /* WashingtonWizards.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = WashingtonWizards.jpg; path = GameStats/Images.xcassets/Teams/WashingtonWizards.jpg; sourceTree = "<group>"; };
 		A89C909B1B3524230074E1EB /* NNBA_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NNBA_Logo.png; path = GameStats/Images.xcassets/NNBA/NNBA_Logo.png; sourceTree = "<group>"; };
-		A8D705F61B137B5800F4E471 /* GameStatsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsView.swift; sourceTree = "<group>"; };
+		A8D705F61B137B5800F4E471 /* CurrentGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentGameView.swift; sourceTree = "<group>"; };
 		A8DC4F8B1B183FA100041484 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		A8DCE4F91BAE283B0097E153 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,9 +234,11 @@
 		A821CD381B0AF4970053556E /* GameStats */ = {
 			isa = PBXGroup;
 			children = (
+				A8DCE4F81BAE27D80097E153 /* REST */,
 				A8DC4F8B1B183FA100041484 /* CustomCell.swift */,
-				A8D705F61B137B5800F4E471 /* GameStatsView.swift */,
-				A821CD3D1B0AF4970053556E /* ViewController.swift */,
+				A8D705F61B137B5800F4E471 /* CurrentGameView.swift */,
+				A821CD3D1B0AF4970053556E /* TodaysGamesView.swift */,
+				A840DDCE1BA938C30042BF93 /* Game.swift */,
 				A821CD3F1B0AF4970053556E /* Main.storyboard */,
 				A821CD391B0AF4970053556E /* Supporting Files */,
 				A877B0261B555BAD0065CD9B /* GameStatsConstants.swift */,
@@ -357,6 +363,14 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		A8DCE4F81BAE27D80097E153 /* REST */ = {
+			isa = PBXGroup;
+			children = (
+				A8DCE4F91BAE283B0097E153 /* SwiftyJSON.swift */,
+			);
+			name = REST;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -454,6 +468,8 @@
 		A821CD2E1B0AF4960053556E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Charlie Buckets";
 				TargetAttributes = {
@@ -565,13 +581,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A821CD3E1B0AF4970053556E /* ViewController.swift in Sources */,
-				A8D705F71B137B5800F4E471 /* GameStatsView.swift in Sources */,
+				A821CD3E1B0AF4970053556E /* TodaysGamesView.swift in Sources */,
+				A8D705F71B137B5800F4E471 /* CurrentGameView.swift in Sources */,
 				A8DC4F8C1B183FA100041484 /* CustomCell.swift in Sources */,
 				A87176E41B5D97F100FE1D63 /* RightSideTriangle.swift in Sources */,
 				A821CD3C1B0AF4970053556E /* AppDelegate.swift in Sources */,
 				A87176E21B5D933A00FE1D63 /* TriangleView.swift in Sources */,
+				A8DCE4FA1BAE283B0097E153 /* SwiftyJSON.swift in Sources */,
 				A877B0271B555BAD0065CD9B /* GameStatsConstants.swift in Sources */,
+				A840DDCF1BA938C30042BF93 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

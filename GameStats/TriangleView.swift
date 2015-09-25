@@ -11,13 +11,13 @@ import UIKit
 class TriangleView: UIView {
 
     override func drawRect(rect: CGRect) {
-        var mask = CAShapeLayer()
+        let mask = CAShapeLayer()
         mask.frame = self.layer.bounds
         
         let width = self.layer.frame.size.width
         let height = self.layer.frame.size.height
         
-        var path = CGPathCreateMutable()
+        let path = CGPathCreateMutable()
         
         CGPathMoveToPoint(path, nil, 0, 0)
         CGPathAddLineToPoint(path, nil, width, 0)

@@ -9,6 +9,7 @@
 import UIKit
 import XCTest
 
+
 class GameStatsTests: XCTestCase {
     
     override func setUp() {
@@ -31,6 +32,10 @@ class GameStatsTests: XCTestCase {
         self.measureBlock() {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+    func testColorCloseness(){
+
     }
     
 }

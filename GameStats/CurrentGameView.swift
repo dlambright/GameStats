@@ -18,8 +18,8 @@ import JBChart
 
 class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartViewDelegate{
     
-    //var piOrLocal: String = "192.168.1.81/"
-    var piOrLocal: String = "127.0.0.1/"
+    var piOrLocal: String = "192.168.1.81/"
+   // var piOrLocal: String = "127.0.0.1/"
     @IBOutlet var navBar: UINavigationItem!
     
     @IBOutlet weak var picHomeTeam: UIImageView!
@@ -71,15 +71,6 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
     @IBOutlet var lblAwayWinProb: UILabel!
     
     
-    //~*~*~ JBChart Variables
-    var chartLegend = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    
-    
-    
-    
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,7 +80,6 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
         
         gethomeTeamData()
         getawayTeamData()
-        
         
         setUpGraph()
         showChart()
@@ -149,10 +139,16 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
     func readHTML(givenURL: String)->NSString{
         let url = NSURL(string: "http://" + givenURL)
         var error: NSError?
-        let html = NSString(contentsOfURL: url!, encoding: NSUTF8StringEncoding, error: &error)
+        let html: NSString?
+        do {
+            html = try NSString(contentsOfURL: url!, encoding: NSUTF8StringEncoding)
+        } catch let error1 as NSError {
+            error = error1
+            html = nil
+        }
         
         if (error != nil) {
-            println("whoops, something went wrong")
+            print("whoops, something went wrong")
             return ""
         } else {
             //println(html!)
@@ -169,26 +165,26 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
         let mostRecentData = lines[(lines.count-3)].componentsSeparatedByString(",")
         
         
-        var TSP :Float = mostRecentData[36].floatValue
+        var TSP:Float = (mostRecentData[36] as NSString).floatValue
         TSP = Float(round(1000*TSP)/10)
         
-        var winPct = mostRecentData[37].floatValue
+        var winPct = (mostRecentData[37]as NSString).floatValue
         winPct = Float(round(1000*winPct)/10)
         
         
-        populateHomeTeam(mostRecentData[0] as! String,
-            newFGMade: mostRecentData[2] as! String,
-            newFGAttempted: mostRecentData[3] as! String,
-            new3PMade: mostRecentData[5] as! String,
-            new3PAttempted: mostRecentData[6] as! String,
-            newFTMade: mostRecentData[8] as! String,
-            newFTAttempted: mostRecentData[9] as! String,
-            newDReb: mostRecentData[12] as! String,
-            newOReb: mostRecentData[11] as! String,
-            newTotalReb: mostRecentData[13] as! String,
-            newSteals: mostRecentData[15] as! String,
-            newBlocks: mostRecentData[16] as! String,
-            newAssists: mostRecentData[14] as! String,
+        populateHomeTeam(mostRecentData[0] ,
+            newFGMade: mostRecentData[2] ,
+            newFGAttempted: mostRecentData[3] ,
+            new3PMade: mostRecentData[5] ,
+            new3PAttempted: mostRecentData[6] ,
+            newFTMade: mostRecentData[8] ,
+            newFTAttempted: mostRecentData[9] ,
+            newDReb: mostRecentData[12] ,
+            newOReb: mostRecentData[11] ,
+            newTotalReb: mostRecentData[13] ,
+            newSteals: mostRecentData[15] ,
+            newBlocks: mostRecentData[16] ,
+            newAssists: mostRecentData[14] ,
             newTSP: TSP.description + "%",
             newWinProb: winPct.description + "%")
     }
@@ -200,33 +196,33 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
         let lines = awayTeamDataAsString.componentsSeparatedByString("\n")
         let mostRecentData = lines[(lines.count-3)].componentsSeparatedByString(",")
         
-        var TSP :Float = mostRecentData[36].floatValue
+        var TSP :Float = (mostRecentData[36] as NSString).floatValue
         TSP = Float(round(1000*TSP)/10)
         
-        var winPct = mostRecentData[37].floatValue
+        var winPct = (mostRecentData[37] as NSString).floatValue
         winPct = Float(round(1000*winPct)/10)
         
         
-        populateAwayTeam(mostRecentData[0] as! String,
-            newFGMade: mostRecentData[2] as! String,
-            newFGAttempted: mostRecentData[3] as! String,
-            new3PMade: mostRecentData[5] as! String,
-            new3PAttempted: mostRecentData[6] as! String,
-            newFTMade: mostRecentData[8] as! String,
-            newFTAttempted: mostRecentData[9] as! String,
-            newDReb: mostRecentData[12] as! String,
-            newOReb: mostRecentData[11] as! String,
-            newTotalReb: mostRecentData[13] as! String,
-            newSteals: mostRecentData[15] as! String,
-            newBlocks: mostRecentData[16] as! String,
-            newAssists: mostRecentData[14] as! String,
+        populateAwayTeam(mostRecentData[0] ,
+            newFGMade: mostRecentData[2] ,
+            newFGAttempted: mostRecentData[3] ,
+            new3PMade: mostRecentData[5] ,
+            new3PAttempted: mostRecentData[6] ,
+            newFTMade: mostRecentData[8] ,
+            newFTAttempted: mostRecentData[9] ,
+            newDReb: mostRecentData[12] ,
+            newOReb: mostRecentData[11] ,
+            newTotalReb: mostRecentData[13] ,
+            newSteals: mostRecentData[15] ,
+            newBlocks: mostRecentData[16] ,
+            newAssists: mostRecentData[14] ,
             newTSP: TSP.description + "%",
             newWinProb: winPct.description + "%")
     }
     
     
     func refreshData(){
-        let qualityOfServiceClass = Int(QOS_CLASS_BACKGROUND.value)
+        let qualityOfServiceClass = Int(QOS_CLASS_BACKGROUND.rawValue)
         let backgroundQueue = dispatch_get_global_queue(qualityOfServiceClass, 0)
         dispatch_async(dispatch_get_global_queue(qualityOfServiceClass,0)){ () -> Void in
             
@@ -279,7 +275,7 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
     }
     @IBAction func buttonTapped(sender: UIButton){
         lblGraph.text = sender.titleLabel?.text
-        var index = getColumnFromStringField(sender.titleLabel!.text!)
+        let index = getColumnFromStringField(sender.titleLabel!.text!)
         lblHomeTeamColor.text = "  " + getTeamNameOnly(homeTeamURL) + "  "
         lblAwayTeamColor.text = "  " + getTeamNameOnly(awayTeamURL) + "  "
         getDataAtColmun(index)
@@ -352,9 +348,27 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
     func lineChartView(lineChartView: JBLineChartView!, didSelectLineAtIndex lineIndex: UInt, horizontalIndex: UInt) {
         let homeData = homeTeamDataAsFloat[Int(horizontalIndex)]
         let awayData = awayTeamDataAsFloat[Int(horizontalIndex)]
-    
-        lblHomeTeamColor.text = "  " + getTeamNameOnly(homeTeamURL) + " = " + homeData.description + "  "
-        lblAwayTeamColor.text = "  " + getTeamNameOnly(awayTeamURL) + " = " + awayData.description + "  "
+        
+        // Display away team info
+        // Remove Decimals, if necessary
+        if (homeData % 1 > (-0.0000001) && homeData % 1 < 0.0000001){
+            let intHomeData = Int(homeData)
+            lblHomeTeamColor.text = "  " + getTeamNameOnly(homeTeamURL) + " = " + intHomeData.description + "  "
+        }
+        else{
+            let homeDataPercent = Float(round(1000*homeData)/10)
+            lblHomeTeamColor.text = "  " + getTeamNameOnly(homeTeamURL) + " = " + homeDataPercent.description + "%  "
+        }
+        
+        // Display away team info
+        // Remove Decimals, if necessary
+        if (awayData % 1 > (-0.0000001) && awayData % 1 < 0.0000001){
+            let intAwayData = Int(awayData)
+            lblAwayTeamColor.text = "  " + getTeamNameOnly(awayTeamURL) + " = " + intAwayData.description + "  "
+        }
+        else{
+            lblAwayTeamColor.text = "  " + getTeamNameOnly(awayTeamURL) + " = " + Float(round(1000*awayData)/10).description + "%  "
+        }
     }
     
     func lineChartView(lineChartView: JBLineChartView!, numberOfVerticalValuesAtLineIndex lineIndex: UInt) -> UInt {
@@ -386,7 +400,7 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
         for line in lines{
             let currentData = line.componentsSeparatedByString(",")
             if (currentData.count >= 36){
-                awayTeamDataAsFloat.append(currentData[index].floatValue)
+                awayTeamDataAsFloat.append((currentData[index] as NSString).floatValue)
             }
             
         }
@@ -403,7 +417,7 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
         for line in lines{
             let currentData = line.componentsSeparatedByString(",")
             if(currentData.count >= 37){
-                homeTeamDataAsFloat.append(currentData[index].floatValue)
+                homeTeamDataAsFloat.append((currentData[index] as NSString).floatValue)
             }
         }
         if(homeTeamDataAsFloat.count > 1){
@@ -414,7 +428,7 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
             lineChart.maximumValue = 1
         }
         else{
-            lineChart.maximumValue = CGFloat(maxElement([maxElement(homeTeamDataAsFloat), maxElement(awayTeamDataAsFloat)])+5)
+            lineChart.maximumValue = CGFloat([homeTeamDataAsFloat.maxElement()!, awayTeamDataAsFloat.maxElement()!].maxElement()!+5)
 
         }
         

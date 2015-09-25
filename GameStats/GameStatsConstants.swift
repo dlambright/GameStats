@@ -9,7 +9,8 @@
 import Foundation
 import UIKit
 
-var primaryColors:[String:UIColor] = ["AtlantaHawks": UIColor(red: 225/255 , green: 58/255 , blue: 62/255 , alpha: 1),
+var primaryColors:[String:UIColor] =
+    ["AtlantaHawks": UIColor(red: 225/255 , green: 58/255 , blue: 62/255 , alpha: 1),
     "BostonCeltics": UIColor(red: 0/255 , green: 131/255 , blue: 72/255 , alpha: 1),
     "BrooklynNets": UIColor(red: 6/255 , green: 25/255 , blue: 34/255 , alpha: 1),
     "CharlotteHornets": UIColor(red: 29/255 , green: 17/255 , blue: 96/255 , alpha: 1),
@@ -28,7 +29,7 @@ var primaryColors:[String:UIColor] = ["AtlantaHawks": UIColor(red: 225/255 , gre
     "MilwaukeeBucks": UIColor(red: 0/255 , green: 71/255 , blue: 27/255 , alpha: 1),
     "MinnesotaTimberwolves": UIColor(red: 0/255 , green: 80/255 , blue: 131/255 , alpha: 1),
     "NewOrleansPelicans": UIColor(red: 0/255 , green: 43/255 , blue: 92/255 , alpha: 1),
-    "NewYorkKnicks": UIColor(red: 245/255 , green: 132/255 , blue: 38/255 , alpha: 1),
+    "NewYorkKnicks": UIColor(red: 0/255 , green: 107/255 , blue: 182/255 , alpha: 1),
     "OklahomaCityThunder": UIColor(red: 0/255 , green: 125/255 , blue: 197/255 , alpha: 1),
     "OrlandoMagic": UIColor(red: 0/255 , green: 125/255 , blue: 197/255 , alpha: 1),
     "Philadelphia76ers": UIColor(red: 237/255 , green: 23/255 , blue: 76/255 , alpha: 1),
@@ -39,22 +40,40 @@ var primaryColors:[String:UIColor] = ["AtlantaHawks": UIColor(red: 225/255 , gre
     "TorontoRaptors": UIColor(red: 206/255 , green: 17/255 , blue: 65/255 , alpha: 1),
     "UtahJazz": UIColor(red: 0/255 , green: 43/255 , blue: 92/255 , alpha: 1),
     "WashingtonWizards": UIColor(red: 0/255 , green: 43/255 , blue: 92/255 , alpha: 1)]
-var secondaryColors:[String:UIColor] = ["AtlantaHawks": UIColor(red: 0, green: 43/255, blue: 92/255, alpha: 1),
+
+
+var secondaryColors:[String:UIColor] =
+    ["AtlantaHawks": UIColor(red: 196/255, green: 214/255, blue: 0/255, alpha: 1),
+    "BostonCeltics": UIColor(red: 187/255, green: 151/255, blue: 83/255, alpha: 1),
+    "BrooklynNets" : UIColor(red: 186/255 , green: 195/255 , blue: 201/255, alpha: 1),
+    "CharlotteHornets": UIColor(red:0/255, green: 140/255, blue: 168/255, alpha: 1),
     "ChicagoBulls": UIColor(red: 6/255, green: 25/255, blue: 34/255, alpha: 1),
+    "ClevelandCavaliers": UIColor(red: 253/255, green: 187/255, blue: 48/255, alpha: 1),
     "DallasMavericks": UIColor(red: 196/255, green: 206/255, blue: 211/255, alpha: 1),
-    "DetriotPistons": UIColor(red: 237/255, green: 23/255, blue: 76/255, alpha: 1),
-    "GoldenStateWarriors": UIColor(red: 253/255, green: 185/255, blue: 39/255, alpha: 1),
-    "HoustonRockets": UIColor(red: 206/255, green: 17/255, blue: 65/255, alpha: 1),
-    "LosAngelesClippers": UIColor(red: 237/255, green: 23/255, blue: 76/255, alpha: 1),
+    "DenverNuggets": UIColor(red: 253/255, green: 185/255, blue: 39/255, alpha: 1),
+    "DetriotPistons": UIColor(red: 0/255, green: 107/255, blue: 182/255, alpha: 1),
+    "GoldenStateWarriors": UIColor(red: 0/255, green: 107/255, blue: 182/255, alpha: 1),
+    "HoustonRockets": UIColor(red: 196/255, green: 206/255, blue: 211/255, alpha: 1),
+    "IndianaPacers": UIColor(red: 0/255, green: 39/255, blue: 93/255, alpha: 1),
+    "LosAngelesClippers": UIColor(red: 0/255, green: 107/255, blue: 182/255, alpha: 1),
     "LosAngelesLakers": UIColor(red: 85/255, green: 37/255, blue: 130/255, alpha: 1),
+    "MemphisGrizzlies": UIColor(red: 115/255, green: 153/255, blue: 198/255, alpha: 1),
+    "MiamiHeat": UIColor(red: 249/255, green: 160/255, blue: 27/255, alpha: 1),
+    "MilwaukeeBucks": UIColor(red: 6/255, green: 25/255, blue: 34/255, alpha: 1),
+    "MinnesotaTimberwolves": UIColor(red: 0/255, green: 169/255, blue: 79/255, alpha: 1),
     "NewOrleansPelicans": UIColor(red: 227/255, green: 24/255, blue: 55/255, alpha: 1),
+    "NewYorkKnicks": UIColor( red: 245/255 , green: 132/255 , blue: 38/255, alpha: 1),
     "OklahomaCityThunder": UIColor(red: 240/255, green: 81/255, blue: 51/255, alpha: 1),
     "OrlandoMagic": UIColor(red: 196/255, green: 206/255 , blue: 211/255, alpha: 1),
     "Philadelphia76ers": UIColor(red: 0, green: 107/255, blue: 182/255, alpha: 1),
+    "PhoenixSuns": UIColor(red: 29/255, green: 17/255, blue: 96/255, alpha: 1),
     "PortlandTrailblazers": UIColor(red: 186/255, green: 195/255, blue: 201/255, alpha: 1),
+    "SacramentoKings": UIColor(red: 142/255, green: 144/255, blue: 144/255, alpha: 1),
+    "SanAntonioSpurs": UIColor(red: 6/255, green: 25/255, blue: 34/255, alpha: 1),
     "TorontoRaptors": UIColor(red: 6/255, green: 25/255, blue: 34/255, alpha: 1),
-    "UtahJazz": UIColor(red: 249/255, green: 160/255, blue: 27/255, alpha: 1),
+    "UtahJazz": UIColor(red: 0/255, green: 71/255, blue: 27/255, alpha: 1),
     "WashingtonWizards": UIColor(red: 227/255, green: 24/255, blue: 55/255, alpha: 1)]
+
 
 var teamNameTable: [String:String] = ["AtlantaHawks": "Hawks",
     "BostonCeltics": "Celtics",
@@ -90,5 +109,50 @@ var teamNameTable: [String:String] = ["AtlantaHawks": "Hawks",
 func getTeamNameOnly(teamURL : String)->String{
     return teamNameTable[teamURL]!
 }
+
+
+// Returns the color for the away team.  If the colors of the teams are too close,
+// The away team's secondary color is used.
+func getAwayTeamColors(homeTeamString: String, awayTeamString: String)-> UIColor{
+
+    if(getDistanceFromColors(homeTeamString, awayTeamString: awayTeamString) < 80){
+        let toReturn: UIColor = secondaryColors[awayTeamString]!
+        return toReturn
+    }else{
+        let toReturn: UIColor = primaryColors[awayTeamString]!
+        return toReturn
+    }
+}
+
+// return the distance in 3D space between two colors
+func getDistanceFromColors(homeTeamString: String, awayTeamString: String)->Float{
+    let homeTeamColor: UIColor = primaryColors[homeTeamString]!
+    let awayTeamColor: UIColor = primaryColors[awayTeamString]!
+    
+    let homeComponents = CGColorGetComponents(homeTeamColor.CGColor)
+    let homeTeamRed = homeComponents[0] * 255
+    let homeTeamGreen = homeComponents[1] * 255
+    let homeTeamBlue = homeComponents[2] * 255
+    
+    let awayComponents = CGColorGetComponents(awayTeamColor.CGColor)
+    let awayTeamRed = awayComponents[0] * 255
+    let awayTeamGreen = awayComponents[1] * 255
+    let awayTeamBlue = awayComponents[2] * 255
+    
+    return Float(sqrt(pow((homeTeamRed-awayTeamRed), 2.0) + pow((homeTeamGreen-awayTeamGreen), 2.0) + pow((homeTeamBlue-awayTeamBlue), 2.0)))
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
     
