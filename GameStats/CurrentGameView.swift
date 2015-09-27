@@ -18,8 +18,7 @@ import JBChart
 
 class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartViewDelegate{
     
-    var piOrLocal: String = "192.168.1.81/"
-   // var piOrLocal: String = "127.0.0.1/"
+    var baseUrl: String = "nnba.ddns.net:11358/"
     @IBOutlet var navBar: UINavigationItem!
     
     @IBOutlet weak var picHomeTeam: UIImageView!
@@ -158,7 +157,9 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
     
     func gethomeTeamData()->Void{
         //let dataString = readHTML(piOrLocal + homeTeamURL)
-        homeTeamDataAsString = readHTML(piOrLocal + homeTeamURL)
+        print (baseUrl + homeTeamURL)
+        homeTeamDataAsString = readHTML(baseUrl + homeTeamURL)
+        print (homeTeamDataAsString)
         
         let lines = homeTeamDataAsString.componentsSeparatedByString("\n")
         
@@ -191,7 +192,7 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
     
     func getawayTeamData()->Void{
         //let dataString : NSString! = readHTML(piOrLocal + awayTeamURL)
-        awayTeamDataAsString = readHTML(piOrLocal + awayTeamURL)
+        awayTeamDataAsString = readHTML(baseUrl + awayTeamURL)
         
         let lines = awayTeamDataAsString.componentsSeparatedByString("\n")
         let mostRecentData = lines[(lines.count-3)].componentsSeparatedByString(",")
