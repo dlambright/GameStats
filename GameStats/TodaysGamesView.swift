@@ -8,17 +8,6 @@
 
 import UIKit
 
-enum JSONValue {
-    
-    case JNumber(NSNumber)
-    case JString(String)
-    case JBool(Bool)
-    case JNull
-    case JArray(Array<JSONValue>)
-    case JObject(Dictionary<String,JSONValue>)
-    case JInvalid(NSError)
-    
-}
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -115,6 +104,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 let jsonData = JSON(data: data)
             
                 var index = 0
+                
+                gameList = []
                 while jsonData[index] != nil{
                     
                     //get the json data
@@ -145,58 +136,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     index += 1
                 }
 
-                
-                
-
             }
         }
-        
-        
-//        let testUrl = NSURL(string: "http://nnba.ddns.net:11358/todaysGames")
-//        var data : NSData
-//            data = NSData(contentsOfURL: testUrl!)!
-//
-//        
-//        
-//        
-//        
-//        
-//        do{
-//            if let json: NSDictionary = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary {
-//                if let items = json["items"] as? NSArray {
-//                    for item in items {
-//                        print (item)
-//                        // construct your model objects here
-//                    }
-//                }
-//            }
-//            
-//        }catch{print(error)}
-        
-
-        
-        
-        
-        
-        
-//        let endpoint = NSURL(string: "http://www.google.com") //nnba_url + "todaysGames")
-////        var endpoint = NSURL(string: "http://www.espn.go.com")
-//        let request:NSURLRequest = NSURLRequest(URL:endpoint!)
-//        let queue:NSOperationQueue = NSOperationQueue()
-//        
-//        
-//        let task = NSURLSession.sharedSession().dataTaskWithURL(endpoint!) {(data, response, error) in
-//            print(NSString(data: data!, encoding: NSUTF8StringEncoding))
-//        }
-        
-        //var connection: NSURLConnection = NSURLConnection(request: request, delegate: self, startImmediately: false)
-        // var data = NSData(contentsOfURL: endpoint!)
-        
-        // let yolo = readHTML("http://www.google.com")
-//        let dataString : NSString! = readHTML(nnba_url + "todaysGames")
-//        //teamList = dataString.componentsSeparatedByString(";") as! [String]
-//        gameList = [Game(newHomeTeamScore: "100", newAwayTeamScore: "99", newGameId: "1", newAwayTeam: "ChicagoBulls", newHomeTeam: "HoustonRockets", newTime: "10:00 4Q"),
-//                    Game(newHomeTeamScore: "100", newAwayTeamScore: "99", newGameId: "1", newAwayTeam: "LosAngelesLakers", newHomeTeam: "GoldenStateWarriors", newTime: "10:00 4Q")]
     }
 
     func readHTML(givenURL: String)->NSString{

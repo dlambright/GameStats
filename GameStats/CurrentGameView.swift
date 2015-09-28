@@ -228,7 +228,7 @@ class GameStatsView: UIViewController, JBLineChartViewDataSource, JBLineChartVie
         dispatch_async(dispatch_get_global_queue(qualityOfServiceClass,0)){ () -> Void in
             
             while self.killThread == false{
-                sleep(2)
+                sleep(60)
                 dispatch_async(dispatch_get_main_queue()){
                     self.getawayTeamData()
                     self.gethomeTeamData()
